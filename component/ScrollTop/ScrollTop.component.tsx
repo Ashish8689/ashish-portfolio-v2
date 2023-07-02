@@ -1,40 +1,44 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Arrow from '../../svg/Arrow'
 
-const ScrollTop = () => {
-    function scrollFunction() {
-        const mybutton = document.getElementById('mybtn')
+const ScrollTop: React.FC = () => {
+    const [hasScrollHeight, setHasScrollHeight] = useState(false)
+
+    const scrollFunction = (): void => {
         if (
             document.body.scrollTop > 20 ||
             document.documentElement.scrollTop > 20
         ) {
-            mybutton.style.display = 'block'
+            setHasScrollHeight(true)
         } else {
-            mybutton.style.display = 'none'
+            setHasScrollHeight(false)
         }
     }
 
     // When the user click the button,scroll to the top of document
-
-    function topfunction() {
+    const scrollToTop = (): void => {
         document.body.scrollTop = 0 // for Safari
         document.documentElement.scrollTop = 0 // for chrome,firefox,and other
     }
 
     useEffect(() => {
-        // Javascript function scrolling up
         // When the user scrolls down 20px from top of the document,button will appear
-
-        window.onscroll = function () {
+        window.onscroll = () => {
             scrollFunction()
         }
-    })
+    }, [])
 
     return (
-        <div className="scrolltop float-right">
-            <div id="mybtn" onClick={topfunction}>
+        <div className="scroll-top">
+            <div
+                className={`scroll-button ${
+                    hasScrollHeight ? 'd-block' : 'd-none'
+                }`}
+                id="scrollButton"
+                onClick={scrollToTop}
+            >
                 <Arrow className="i" />
             </div>
         </div>

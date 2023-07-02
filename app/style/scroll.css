@@ -1,5 +1,4 @@
-#mybtn {
-    display: none;
+.scroll-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -13,11 +12,11 @@
     box-shadow: 0 2px 20px rgba(122, 87, 209, 0.8);
 }
 
-#mybtn:hover {
+.scroll-button:hover {
     opacity: 0.7;
 }
 
-#mybtn .i {
+.scroll-button .i {
     width: 20px;
     fill: var(--title-color);
 }

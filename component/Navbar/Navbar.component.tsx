@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { NAV_LINKS } from '@/constant/links.constant'
 import GithubIcon from '../../svg/github.svg'
@@ -17,11 +17,13 @@ const Navbar: React.FC = () => {
         }
     }
 
-    window.addEventListener('scroll', changeBackground)
-
     const handleHamburger = (): void => setIsHamburgerOpen(!isHamburgerOpen)
 
     const handleNavLinkClick = (): void => setIsHamburgerOpen(false)
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeBackground)
+    }, [])
 
     return (
         <div className={isPageScrolling ? 'nav active' : 'nav'}>
