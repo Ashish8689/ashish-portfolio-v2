@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+:root {
+    --main-color: #7a57d1;
+    --title-color: #ffffff;
+    --bold-color: #3f3b3b;
+    --bold-light-color: #5e5147;
+    --text-color: #5c5c5c;
+    --light-color: #dee1ec;
+    --box-shadow: rgba(122, 87, 209, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans';
+}
+
+/* ************************   Default Page   ************************* */
+
+.default {
+    width: 100%;
+    height: 420px;
+    display: grid;
+    place-items: center;
+}
+
+.default h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    /* cursor: none; */
+}
+
+body.active {
+    height: 100vh !important;
+    overflow-y: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--bold-color);
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.App {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 15px;
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* ******************   Animation    *********************** */
+
+.box-bar {
+    width: 80px;
+    height: 80px;
+    border: 15px solid var(--main-color);
+}
+
+.circle-round {
+    width: 80px;
+    height: 80px;
+    border: 15px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.box-fill {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background: var(--main-color);
+    opacity: 0.3;
+}
+
+.box-mini-bar {
+    position: absolute;
+    bottom: 47px;
+    left: 22px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--main-color);
+    opacity: 0.2;
+    border-radius: 2px;
+}
+
+/* *******************   Button start  ******************** */
+
+.button-container {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    display: inline-block;
+    width: 150px;
+    padding: 10px 20px;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.button.active {
+    background: var(--main-color);
+    color: var(--title-color);
+}
+
+.button:hover {
+    background: var(--main-color);
+    color: var(--title-color);
+    box-shadow: 0px 2px 30px rgba(122, 87, 209, 0.6);
+}
+
+.button.active:hover {
+    background: transparent;
+    color: var(--main-color);
+}
+
+/* ********  Button end  ******** */
+
+/* ****************  Section flex  *****************  */
+
+.section-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-flex .section-left,
+.section-flex .section-right {
+    flex: 50%;
+}
+
+@media (max-width: 768px) {
+    .section-flex .section-left,
+    .section-flex .section-right {
+        flex: 100%;
+    }
+}
+
+/* ********************************   Cursor Start  ***************************************** */
+
+/* .cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--bold-light-color);
+    border-radius: 50%;
+    left: 0%;
+    top: 0%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.08s;
+    z-index: 2000;
+}
+
+.cursor2 {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: var(--bold-color);
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+} */
+
+/* *****************  Scroll bar  ************* */
+
+/* width */
+/* ::-webkit-scrollbar {
+    width: 10px;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 20px;
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.8;
+} */

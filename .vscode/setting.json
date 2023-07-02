@@ -8,6 +8,5 @@
 
     "editor.tabSize": 4,
     "prettier.tabWidth": 4,
-    "prettier.printWidth": 100,
-    "git.ignoreLimitWarning": true
+    "prettier.printWidth": 100
 }

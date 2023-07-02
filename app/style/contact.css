@@ -1,0 +1,319 @@
+.contact-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.map {
+    width: 100%;
+    height: 350px;
+    border: none;
+}
+
+.contact-color-container {
+    width: 100%;
+    height: 350px;
+    background: var(--main-color);
+    margin-top: -10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section {
+    padding: 30px 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background: var(--title-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+}
+
+.contact-section h3 {
+    font-size: 28px;
+    color: var(--bold-color);
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.contact-section p {
+    padding-bottom: 15px;
+    max-width: 95%;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contact-section .mini-flex {
+    margin: 5px 0;
+}
+
+.contact-section .mini-flex .i-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: var(--main-color);
+    display: grid;
+    place-items: center;
+    cursor: none;
+    border: 3px solid var(--light-color);
+}
+
+.contact-section .mini-flex .i-container .i {
+    width: 20px;
+}
+
+.contact-section .mini-flex .i-container .i path {
+    fill: var(--title-color);
+}
+
+.contact-section .mini-flex h5 {
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: 0.3s ease-in;
+}
+
+.contact-section .mini-flex a {
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.contact-section .mini-flex h5:hover {
+    opacity: 0.8;
+}
+
+/* *************   Form start   *************** */
+
+form input,
+form textarea {
+    padding: 14px;
+    width: 100%;
+    color: var(--bold-color);
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0.8;
+    border: none !important;
+    background: var(--light-color);
+    outline: none;
+    border-radius: 8px;
+    resize: none;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+form textarea {
+    height: 120px !important;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+form .button {
+    margin-top: 25px;
+}
+
+.contact-section .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.contact-section .form-row .form-group {
+    width: 49%;
+}
+
+/* ******************   Animations   ******************* */
+
+.contact-color-container .mini-dot {
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+    opacity: 0.1;
+}
+
+.contact-color-container .light-triangle {
+    position: absolute;
+    top: 35px;
+    left: 70px;
+    width: 30px;
+    transform: rotate(30deg);
+    opacity: 0.2;
+}
+
+.contact-color-container .triangle2 {
+    position: absolute;
+    top: 78%;
+    left: 68%;
+    transform: rotate(20deg);
+    opacity: 0.2;
+}
+
+.contact-color-container .light-star {
+    position: absolute;
+    top: 105px;
+    left: 40px;
+    width: 20px;
+    transform: rotate(30deg);
+    opacity: 0.2;
+}
+
+.contact-color-container .star2 {
+    position: absolute;
+    top: 80%;
+    left: 43%;
+    transform: rotate(30deg);
+    opacity: 0.2;
+}
+
+.contact-color-container .light-wave {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    width: 70px;
+    opacity: 0.2;
+}
+
+.contact-color-container .wave2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 70px;
+    opacity: 0.2;
+}
+
+.contact-color-container .wave3 {
+    position: absolute;
+    top: 20%;
+    left: initial;
+    right: 5%;
+    width: 70px;
+    opacity: 0.2;
+}
+
+.contact-color-container .wave4 {
+    position: absolute;
+    top: initial;
+    bottom: 0;
+    left: initial;
+    right: 5%;
+    width: 120px;
+    opacity: 0.4;
+    transform: rotate(30deg);
+}
+
+.contact-color-container .circle-fill {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fcefee;
+    opacity: 0.1;
+}
+
+.contact-color-container .circle-fill:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #e2f3f5;
+    opacity: 1;
+}
+
+.contact-color-container .box-fill {
+    position: absolute;
+    bottom: 40px;
+    left: 14.5%;
+    width: 40px;
+    height: 40px;
+    background: var(--title-color) !important;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.contact-color-container .box-mini-bar {
+    position: absolute;
+    bottom: 47px;
+    left: 14%;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--title-color);
+    opacity: 0.1;
+    border-radius: 2px;
+}
+
+/* *********************   Media Query  ********************* */
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 30px 20px;
+        width: 90%;
+    }
+
+    .map {
+        height: 450px;
+    }
+
+    .contact-color-container {
+        height: 450px;
+    }
+
+    .contact-color-container .box-fill {
+        bottom: 20px;
+        left: 45%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-color-container .box-mini-bar {
+        bottom: 10px;
+        left: 48%;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-container {
+        padding-bottom: 50px;
+    }
+
+    .contact-section {
+        width: 100%;
+        border-radius: initial;
+    }
+
+    .contact-section h3 {
+        padding-top: 30px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    .contact-section .form-row {
+        display: initial;
+        justify-content: initial;
+    }
+
+    .contact-section .form-row .form-group {
+        width: 100%;
+        margin: 12px 0;
+    }
+}

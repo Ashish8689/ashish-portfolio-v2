@@ -1,24 +1,39 @@
 {
-  "name": "ashish-portfolio-v2",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@types/node": "20.2.5",
-    "@types/react": "18.2.7",
-    "@types/react-dom": "18.2.4",
-    "eslint": "8.41.0",
-    "eslint-config-next": "13.4.4",
-    "isotope-layout": "^3.0.6",
-    "next": "13.4.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "swiper": "^9.3.2",
-    "typescript": "5.0.4"
-  }
+    "name": "ashish-portfolio-v2",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "prettier-check": "prettier . --check",
+        "prettier-fix": "prettier . --write",
+        "eslint-check": "eslint '**/*.{ts,tsx,js}' --no-error-on-unmatched-pattern",
+        "eslint-fix": "eslint '**/*.{ts,tsx,js}' --no-error-on-unmatched-pattern --fix",
+        "lint": "yarn run eslint-fix && yarn run prettier-fix",
+        "lint-check": "yarn run eslint-check  && yarn run prettier-check"
+    },
+    "dependencies": {
+        "@types/node": "20.2.5",
+        "@types/react": "18.2.7",
+        "@types/react-dom": "18.2.4",
+        "next": "13.4.4",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-tsparticles": "^2.10.1",
+        "swiper": "^9.3.2"
+    },
+    "devDependencies": {
+        "@svgr/webpack": "^8.0.1",
+        "@typescript-eslint/eslint-plugin": "^5.59.11",
+        "@typescript-eslint/parser": "^5.59.11",
+        "eslint": "^8.43.0",
+        "eslint-config-next": "^13.4.6",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "^2.8.8",
+        "typescript": "^5.1.3"
+    }
 }

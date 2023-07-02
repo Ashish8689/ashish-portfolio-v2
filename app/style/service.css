@@ -1,0 +1,138 @@
+.service {
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.service .title {
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--bold-color);
+}
+
+.service .subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.service .para {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.service .service-grid {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.service-grid .service-block {
+    padding: 20px;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-block .service-img-container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 40%;
+}
+
+.service-block .service-img-container svg {
+    width: 100%;
+    max-width: 100px;
+    height: 70px;
+    fill: var(--main-color);
+}
+
+.service-block .service-content {
+    padding-top: 20px;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    height: 60%;
+}
+
+.service-block .service-content .service-content-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.service-block .service-content .service-content-para {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    opacity: 0.9;
+}
+
+.service-grid .service-block:hover {
+    background: var(--main-color);
+    box-shadow: 0 10px 20px var(--box-shadow);
+}
+
+.service-grid .service-block:hover .service-content .service-content-title,
+.service-grid .service-block:hover .service-content .service-content-para {
+    color: var(--title-color);
+}
+
+.service-grid .service-block:hover .service-img-container svg {
+    fill: var(--title-color);
+    opacity: 0.7;
+}
+
+/* ****************  Animation start  ****************  */
+
+.service .circle-round {
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    opacity: 0.7;
+    width: 50px;
+    height: 50px;
+    border: 10px solid var(--main-color);
+}
+
+.service .dotted {
+    position: absolute;
+    width: 150px;
+    bottom: -40px;
+    right: -50px;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.service .light-star {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+
+.service .light-wave {
+    position: absolute;
+    bottom: 30%;
+    left: -40px;
+    transform: rotate(-15deg);
+    z-index: -1;
+}
+
+.service .wave2 {
+    position: absolute;
+    bottom: 27%;
+    left: -36px;
+    transform: rotate(-15deg);
+}
+
+@media (max-width: 500px) {
+    .service .wave2 {
+        bottom: 28.5%;
+    }
+}
