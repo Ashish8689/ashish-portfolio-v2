@@ -123,16 +123,10 @@ const Contact: React.FC = () => {
                             </div>
                             <div className="mini-flex-right">
                                 <h5>
-                                    <a href="tel: 8689868867">
-                                    
-                                        +91 8689868867
-                                    </a>
+                                    <a href="tel: 8689868867">+91 8689868867</a>
                                 </h5>
                                 <h5>
-                                    <a href="tel: 7021606307">
-                                    
-                                        +91 7021606307
-                                    </a>
+                                    <a href="tel: 7021606307">+91 7021606307</a>
                                 </h5>
                             </div>
                         </div>
