@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import ServiceList from './ServiceList.component'
 import { SERVICE_DATA } from '@/constant/service.constant'
+import CustomImage from '../CustomImage/CustomImage.component'
 
 const Service: FC = () => {
     return (
@@ -19,12 +20,21 @@ const Service: FC = () => {
             </div>
 
             <div className="circle-round" />
-            {/* <img alt="Ashish Gupta" className="dotted" src={process.env.PUBLIC_URL + '/image/icons/dot.png'}/>
-            <img alt="Ashish Gupta" className="light-star"
-             src={process.env.PUBLIC_URL + '/image/icons/light-star.png'}/>
-            <img alt="Ashish Gupta" className="light-wave" 
-            src={process.env.PUBLIC_URL + '/image/icons/light-wave.png'}/>
-            <img alt="Ashish Gupta" className="light-wave wave2" src={process.env.PUBLIC_URL + '/image/icons/light-wave.png'}/> */}
+
+            <div className="dotted">
+                <CustomImage src="/image/icons/dot.png" />
+            </div>
+
+            <div className="light-star">
+                <CustomImage src="/image/icons/light-star.png" />
+            </div>
+            <div className="light-wave">
+                <CustomImage src="/image/icons/light-wave.png" />
+            </div>
+
+            <div className="light-wave wave2">
+                <CustomImage src="/image/icons/light-wave.png" />
+            </div>
         </div>
     )
 }

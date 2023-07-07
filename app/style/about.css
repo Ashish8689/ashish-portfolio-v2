@@ -1,0 +1,291 @@
+.about {
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.about .section-left {
+    position: relative;
+    flex: 35%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about .dotted {
+    position: absolute;
+    bottom: -60px;
+    left: -80px;
+    width: 180px !important;
+    height: 180px;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.about .section-right {
+    flex: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about-header-container h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+.about-header-container h3 {
+    font-size: 32px;
+    color: var(--bold-color);
+    font-weight: 700;
+}
+
+.about .img-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.about .img-container img {
+    width: 95%;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+/* *********************  Section 1 start  ********************** */
+
+.tab-section {
+    display: none;
+}
+
+.tab-section.active {
+    display: block;
+}
+
+.tabs {
+    margin: 0;
+    list-style: none;
+    padding: 10px 0;
+    text-align: end;
+}
+
+.tab {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.tab.active,
+.tab:hover {
+    background: var(--main-color);
+    color: var(--title-color);
+}
+
+.tab-content {
+    padding: 30px;
+}
+
+/* ****  tab end  ***** */
+
+.tab-content .content {
+    max-width: 100%;
+}
+
+.tab-content .content .title {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 14px;
+    color: var(--bold-color);
+}
+
+.tab-content .content .para {
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    color: var(--text-color);
+}
+
+.tab-content .content .i {
+    width: 20px;
+    fill: var(--main-color);
+}
+
+.tab-content .content .i path {
+    fill: var(--main-color);
+}
+
+.tab-content .content h5 {
+    font-size: 16px;
+}
+
+.tab-content .button {
+    margin-top: 25px;
+    width: 180px;
+}
+
+.tab-content .content .section-flex {
+    padding-top: 15px;
+}
+
+.tab-content .content .section-left {
+    height: auto;
+}
+
+.mini-flex {
+    display: flex;
+    padding: 5px 0;
+}
+
+.mini-flex .mini-flex-left {
+    flex: 10%;
+    display: grid;
+    place-items: center;
+}
+
+.mini-flex .mini-flex-left span {
+    display: grid;
+    place-items: center;
+}
+
+.mini-flex .mini-flex-right {
+    flex: 90%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.mini-flex .mini-flex-right h5 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ****************   Education start  ********************* */
+
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.education-item-block {
+    padding: 5px 24px 10px 20px;
+    border-radius: 30px;
+    background: var(--title-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.education-item-block .header {
+    font-size: 40px;
+    padding-bottom: 25px;
+    font-weight: 600;
+    color: var(--main-light-color);
+}
+
+.education-item-block .content {
+    text-align: right;
+}
+
+.education-item-block h2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.education-item-block h3 {
+    margin-top: 5px;
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.education-item-block .year {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-light-color);
+}
+
+/* *****************  Animation   ********************  */
+
+.about .line-circle {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: 90px;
+    opacity: 0.6;
+    z-index: 7;
+}
+
+.about .dot-line {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 20px;
+    opacity: 0.6;
+}
+
+/* **********************   Media Query  ************************* */
+
+@media (max-width: 768px) {
+    .tab-content {
+        padding: 35px 10px 0 20px;
+    }
+
+    .tab {
+        margin: 5px;
+    }
+
+    .about .section-left,
+    .about .section-right {
+        flex: 100%;
+    }
+
+    .tab-content .content .section-left,
+    .tab-content .content .section-right {
+        flex: 50%;
+    }
+
+    .about .dot-line {
+        position: absolute;
+        top: -10px;
+        left: initial;
+        right: 50px;
+        height: 80px;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .about-header-container {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .about-header-container h3 {
+        font-size: 24px;
+    }
+
+    .about-header-container h4 {
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+
+    .about .img-container {
+        display: grid;
+        place-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .tab-content {
+        padding: 30px 0px;
+    }
+
+    .tabs {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .tab {
+        margin: 5px;
+    }
+}

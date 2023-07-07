@@ -2,6 +2,7 @@
 
 :root {
     --main-color: #7a57d1;
+    --main-light-color: rgba(122, 87, 209, 0.4);
     --title-color: #ffffff;
     --bold-color: #3f3b3b;
     --bold-light-color: #5e5147;
@@ -40,21 +41,9 @@ h6 {
     margin: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    height: 100%;
-}
-
 body {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    cursor: none;
-}
-
-body.active {
-    height: 100vh !important;
-    overflow-y: hidden;
 }
 
 a {
@@ -72,12 +61,6 @@ a:hover {
 
 .d-none {
     display: none;
-}
-
-.App {
-    width: 100%;
-    z-index: 1;
-    position: relative;
 }
 
 .container {
@@ -197,33 +180,4 @@ a:hover {
     .section-flex .section-right {
         flex: 100%;
     }
-}
-
-/* ********************************   Cursor Start  ***************************************** */
-
-.cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--bold-light-color);
-    border-radius: 50%;
-    left: 0%;
-    top: 0%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: 0.08s;
-    z-index: 2000;
-}
-
-.cursor2 {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background: var(--bold-color);
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2000;
 }
