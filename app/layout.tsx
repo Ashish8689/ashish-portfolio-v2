@@ -4,6 +4,7 @@ import './style/footer.css'
 import './style/scroll.css'
 import './style/header.css'
 import './style/about.css'
+import './style/skills.css'
 import './style/service.css'
 import './style/hire.css'
 import './style/testimonial.css'
@@ -28,26 +29,11 @@ const RootLayout = ({
 }): JSX.Element => {
     return (
         <html lang="en">
-            {/* <script>
-
-var cursor = document.querySelector(".cursor");
-var cursor2 = document.querySelector(".cursor2");
-
-window.addEventListener("mousemove",function(e){
-    cursor.style.cssText = cursor2.style.cssText = 
-    "left: " + e.clientX + "px; top: " + e.clientY + "px;";
-});
-
-</script> */}
-
             <body>
                 <Navbar />
                 {children}
                 <Footer />
                 <ScrollTop />
-
-                {/* <div className="cursor" />
-                <div className="cursor2" /> */}
             </body>
         </html>
     )
