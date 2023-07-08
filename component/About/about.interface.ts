@@ -1,8 +1,17 @@
 import { ReactNode } from 'react'
 
+export enum AboutTab {
+    PERSONAL = 'personal',
+    EDUCATION = 'education',
+}
 export interface AboutContentProps {
     icon: any
     element: ReactNode
+}
+
+export interface AboutTabsProps {
+    activeTab: string
+    onClick: (string: AboutTab) => void
 }
 
 export interface EducationItemProps {
@@ -13,9 +22,4 @@ export interface EducationItemProps {
         board: string
         year: string
     }
-}
-
-export enum AboutTab {
-    PERSONAL = 'personal',
-    EDUCATION = 'education',
 }

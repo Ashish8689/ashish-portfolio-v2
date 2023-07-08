@@ -7,10 +7,6 @@
 .about .section-left {
     position: relative;
     flex: 35%;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 }
 
 .about .dotted {
@@ -30,21 +26,27 @@
     justify-content: space-evenly;
 }
 
-.about-header-container h4 {
+.about-header-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-header h4 {
     font-size: 16px;
     font-weight: 400;
     color: var(--main-color);
 }
 
-.about-header-container h3 {
+.about-header h3 {
     font-size: 32px;
     color: var(--bold-color);
     font-weight: 700;
 }
 
 .about .img-container {
-    width: 100%;
-    overflow: hidden;
+    display: initial;
 }
 
 .about .img-container img {
@@ -67,7 +69,6 @@
 .tabs {
     margin: 0;
     list-style: none;
-    padding: 10px 0;
     text-align: end;
 }
 
@@ -169,14 +170,17 @@
 }
 
 .education-item-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 5px 24px 10px 20px;
     border-radius: 30px;
     background: var(--title-color);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(122, 87, 209, 0.2);
 }
 
 .education-item-block .header {
-    font-size: 40px;
+    font-size: 30px;
     padding-bottom: 25px;
     font-weight: 600;
     color: var(--main-light-color);
@@ -193,7 +197,7 @@
 
 .education-item-block h3 {
     margin-top: 5px;
-    font-size: 22px;
+    font-size: 18px;
     color: var(--main-color);
 }
 
@@ -255,16 +259,16 @@
 }
 
 @media (max-width: 600px) {
-    .about-header-container {
+    .about-header {
         text-align: center;
         padding-bottom: 20px;
     }
 
-    .about-header-container h3 {
+    .about-header h3 {
         font-size: 24px;
     }
 
-    .about-header-container h4 {
+    .about-header h4 {
         font-size: 14px;
         padding-bottom: 5px;
     }

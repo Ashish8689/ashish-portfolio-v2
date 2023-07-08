@@ -20,7 +20,7 @@ export const EDUCATION_DETAILS = [
         year: '2014 - 2015',
     },
     {
-        degreeType: 'Junior',
+        degreeType: 'Junior College',
         degree: 'HSC',
         college: "The BSGD's Junior College",
         board: 'Maharashtra Board',

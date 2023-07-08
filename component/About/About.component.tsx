@@ -4,7 +4,7 @@ import { AboutTab } from './about.interface'
 import CustomImage from '../CustomImage/CustomImage.component'
 import Education from './Education.component'
 import PersonalInfo from './PersonalInfo.component'
-import { ABOUT_TABS } from '@/constant/about.constant'
+import AboutTabs from './AboutTabs.component'
 
 const About: React.FC = () => {
     const [activeTab, setActiveTab] = useState(AboutTab.PERSONAL)
@@ -17,13 +17,19 @@ const About: React.FC = () => {
     return (
         <div className="about" id="about">
             <div className="container">
+                <div className="about-header-container">
+                    <div className="about-header">
+                        <h4>Why hire me for your next Project</h4>
+                        <h3>Professional Experience</h3>
+                    </div>
+
+                    <AboutTabs
+                        activeTab={activeTab}
+                        onClick={(tab) => setActiveTab(tab)}
+                    />
+                </div>
                 <div className="section-flex">
                     <div className="section-left">
-                        <div className="about-header-container">
-                            <h4>Why hire me for your next Project</h4>
-                            <h3>Professional Experience</h3>
-                        </div>
-
                         <div className="img-container">
                             <CustomImage src="/image/1.png" />
                         </div>
@@ -34,19 +40,6 @@ const About: React.FC = () => {
                     {/* Section left end */}
 
                     <div className="section-right">
-                        <ul className="tabs">
-                            {ABOUT_TABS.map(({ tab, label }, index) => (
-                                <li
-                                    className={`tab button ${
-                                        activeTab == tab && 'active'
-                                    }`}
-                                    key={index}
-                                    onClick={() => setActiveTab(tab)}
-                                >
-                                    {label}
-                                </li>
-                            ))}
-                        </ul>
                         <div className="tab-content">
                             <section
                                 className={`tab-section ${
@@ -73,17 +66,11 @@ const About: React.FC = () => {
             {/* ***********   Animation   ************* */}
 
             <div className="line-circle">
-                <CustomImage
-                    alt="Ashish Gupta"
-                    src="/image/icons/line-circle.png"
-                />
+                <CustomImage src="/image/icons/line-circle.png" />
             </div>
 
             <div className="dot-line">
-                <CustomImage
-                    alt="Ashish Gupta"
-                    src="/image/icons/dot-line.png"
-                />
+                <CustomImage src="/image/icons/dot-line.png" />
             </div>
         </div>
     )

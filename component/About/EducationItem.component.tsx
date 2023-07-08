@@ -6,11 +6,14 @@ const EducationItem = ({
 }: EducationItemProps): React.JSX.Element => {
     return (
         <div className="education-item-block">
-            <h1 className="header">{degreeType}</h1>
-            <div className="content">
-                <h2>{board}</h2>
-                <h3>{degree}</h3>
+            <div>
+                <h1 className="header">{degreeType}</h1>
+                <div className="content">
+                    <h2>{board}</h2>
+                    <h3>{degree}</h3>
+                </div>
             </div>
+
             <p className="year">{year}</p>
         </div>
     )
