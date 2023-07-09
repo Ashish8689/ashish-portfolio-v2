@@ -63,6 +63,10 @@ a:hover {
     display: none;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1140px;

@@ -1,0 +1,145 @@
+.landing-portfolio {
+    padding: 60px 0;
+    position: relative;
+}
+
+.landing-portfolio .title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.landing-portfolio .subtitle {
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* ***************  Landing Portfolio Block   ************** */
+
+.landing-portfolio-block {
+    margin-bottom: 50px;
+}
+
+.landing-portfolio-block .landing-flex {
+    margin-top: 40px;
+    display: flex;
+}
+
+.landing-flex .landing-flex-left {
+    flex: 60%;
+}
+
+.landing-flex .landing-flex-left .img-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.landing-flex .landing-flex-left .img-container::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top right,
+        rgba(122, 87, 209, 0.4),
+        rgba(122, 87, 209, 0.76)
+    );
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.landing-flex .landing-flex-left .img-container:hover::before {
+    opacity: 0;
+}
+
+.landing-flex .landing-flex-left .img-container img {
+    max-width: 100%;
+}
+
+.landing-flex .landing-flex-right {
+    position: relative;
+    flex: 40%;
+}
+
+.landing-portfolio-content-container {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-25%, -50%);
+    background: var(--title-color);
+    padding: 30px;
+    width: 550px;
+    border-radius: 10px;
+    text-align: right;
+    box-shadow: 0 4px 20px rgba(122, 87, 209, 0.2);
+}
+
+.landing-portfolio-content-container h3 {
+    font-size: 26px;
+    color: var(--main-color);
+}
+
+.landing-portfolio-content-container p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--bold-light-color);
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.project-links-container {
+    margin-top: 10px;
+    display: flex;
+}
+
+.project-links-container .project-icons {
+    width: 20px;
+    margin-right: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.project-links-container .project-icons:hover {
+    fill: var(--main-color);
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+.stack-container {
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    transform: translate(-25%, -50%);
+    width: 550px;
+    padding: 0 20px;
+    text-align: right;
+}
+
+.stack-container span {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.order-1 {
+    order: 1;
+}
+
+.left-40 {
+    left: 40%;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.margin-right-20 {
+    margin-left: 0 !important;
+    margin-right: 20px;
+}

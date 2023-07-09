@@ -72,17 +72,21 @@
     opacity: 0.9;
 }
 
-.service-grid .service-block:hover {
+.service-grid .service-block:hover,
+.service-grid .service-block.active {
     background: var(--main-color);
     box-shadow: 0 10px 20px var(--box-shadow);
 }
 
 .service-grid .service-block:hover .service-content .service-content-title,
-.service-grid .service-block:hover .service-content .service-content-para {
+.service-grid .service-block:hover .service-content .service-content-para,
+.service-grid .service-block.active .service-content .service-content-title,
+.service-grid .service-block.active .service-content .service-content-para {
     color: var(--title-color);
 }
 
-.service-grid .service-block:hover .service-img-container svg {
+.service-grid .service-block:hover .service-img-container svg,
+.service-grid .service-block.active .service-img-container svg {
     fill: var(--title-color);
     opacity: 0.7;
 }
