@@ -6,17 +6,14 @@ import Call from '../../svg/Call'
 import CustomImage from '../CustomImage/CustomImage.component'
 
 const Contact: React.FC = () => {
-    const formSubmit = (e: React.FormEvent): void => {
+    const formSubmit = (e: any): void => {
         e.preventDefault()
 
-        const formEl = document.forms.contactForm
-        const formData = new FormData(formEl)
-
-        const firstName = formData.get('firstName')
-        const lastName = formData.get('lastName')
-        const email = formData.get('email')
-        const phone = formData.get('mobile')
-        const message = formData.get('message')
+        const firstName = e.target.firstName.value
+        const lastName = e.target.lastName.value
+        const email = e.target.email.value
+        const phone = e.target.mobile.value
+        const message = e.target.message.value
 
         const url =
             'https://wa.me/918689868867?text=' +
