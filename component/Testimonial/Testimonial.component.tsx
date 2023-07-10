@@ -1,8 +1,6 @@
-'use client'
-
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Autoplay } from 'swiper'
+import { Navigation, Autoplay } from 'swiper/modules'
 
 import { TESTIMONIAL_LIST } from '@/constant/testimonial.constant'
 import TestimonialItem from './TestimonialItem.component'
@@ -16,7 +14,6 @@ const Testimonial: React.FC = () => {
                 <h2 className="subtitle">Client&apos;s Say</h2>
 
                 <Swiper
-                    loop
                     navigation
                     autoplay={{
                         delay: 2500,
@@ -40,8 +37,7 @@ const Testimonial: React.FC = () => {
                         },
                     }}
                     modules={[Navigation, Autoplay]}
-                    slidesPerView={3}
-                    spaceBetween={20}
+                    spaceBetween={10}
                 >
                     {TESTIMONIAL_LIST.map((testimonial) => (
                         <SwiperSlide key={testimonial.id}>

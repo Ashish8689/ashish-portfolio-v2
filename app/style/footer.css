@@ -9,7 +9,7 @@
 }
 
 .footer-middle-container {
-    width: 300px;
+    width: 350px;
 }
 
 .footer-middle-container h1 {
@@ -49,10 +49,12 @@
 
 .footer-social .i {
     width: 24px;
+    color: var(--main-color);
     fill: var(--main-color);
 }
 
 .footer-social a:hover .i {
+    color: var(--title-color);
     fill: var(--title-color);
 }
 
@@ -73,12 +75,11 @@
 .footer-end p {
     margin: 0;
     color: var(--title-color);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
 }
 
 .footer-end a {
-    color: var(--bold-color);
-    padding-left: 2px;
-    font-weight: 800;
+    color: greenyellow;
+    padding-left: 4px;
 }

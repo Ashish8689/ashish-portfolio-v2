@@ -1,29 +1,43 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
-import { NAV_LINKS } from '@/constant/links.constant'
+import { NAV_LINKS, REGEX_SCROLL } from '@/constant/links.constant'
 import GithubIcon from '../../svg/github.svg'
 
 const Navbar: React.FC = () => {
     const [isPageScrolling, setIsPageScrolling] = useState(false)
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
 
-    const changeBackground = (): void => {
+    const changeBackground = useCallback((): void => {
         if (window.scrollY >= 100) {
             setIsPageScrolling(true)
         } else {
             setIsPageScrolling(false)
         }
-    }
+    }, [])
 
     const handleHamburger = (): void => setIsHamburgerOpen(!isHamburgerOpen)
 
-    const handleNavLinkClick = (): void => setIsHamburgerOpen(false)
+    const handleNavLinkClick = (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    ): void => {
+        setIsHamburgerOpen(false)
+        // first prevent the default behavior
+        e.preventDefault()
+        // get the href and remove everything before the hash (#)
+        const href = e.currentTarget.href
+        const targetId = href.replace(REGEX_SCROLL, '')
+        // get the element by id and use scrollIntoView
+        const elem = document.getElementById(targetId)
+        elem?.scrollIntoView({
+            behavior: 'smooth',
+        })
+    }
 
     useEffect(() => {
         window.addEventListener('scroll', changeBackground)
-    }, [])
+    }, [changeBackground])
 
     return (
         <div className={isPageScrolling ? 'nav active' : 'nav'}>
@@ -45,6 +59,7 @@ const Navbar: React.FC = () => {
                                 className="nav-link"
                                 href={link}
                                 key={index}
+                                scroll={false}
                                 onClick={handleNavLinkClick}
                             >
                                 {page}
@@ -54,6 +69,7 @@ const Navbar: React.FC = () => {
                         <Link
                             className="nav-link"
                             href="https://github.com/Ashish8689"
+                            target="_blank"
                         >
                             <GithubIcon className="github" />
                         </Link>

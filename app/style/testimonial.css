@@ -82,7 +82,7 @@
     width: 90px;
     height: 90px;
     border-radius: 999px;
-    border: 4px solid whitesmoke;
+    border: 4px solid var(--main-light-color);
     overflow: hidden;
 }
 
@@ -97,13 +97,13 @@
     background: var(--title-color);
     display: grid;
     place-items: center;
-    color: var(--main-color);
+    box-shadow: 0 1px 10px rgba(122, 87, 209, 0.35);
     z-index: 5;
 }
 
 .testimonial-block .testimonial-img-container:after {
     content: ' ';
-    background-image: url('../../image/quote.svg');
+    background-image: url('/image/icons/quote.svg');
     position: absolute;
     top: 63%;
     left: 60%;

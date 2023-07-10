@@ -1,10 +1,6 @@
 import React, { FC } from 'react'
-import Facebook from '../../svg/Facebook'
-import Instagram from '../../svg/Instagram'
-import WhatsApp from '../../svg/WhatsApp'
-import LinkedIn from '../../svg/LinkedIn'
-import GitHub from '../../svg/github.svg'
 import CustomImage from '../CustomImage/CustomImage.component'
+import { SOCIAL_LINKS } from '@/constant/links.constant'
 
 const Header: FC = () => {
     return (
@@ -13,7 +9,7 @@ const Header: FC = () => {
                 <div className="section-flex">
                     <div className="section-left">
                         <div className="content">
-                            <h1 className="titlehead">
+                            <h1 className="title-head">
                                 {'<'}Hii{'>'}{' '}
                             </h1>
                             <h1 className="title">
@@ -31,45 +27,20 @@ const Header: FC = () => {
 
                             <div className="content-social header-social">
                                 <div className="social-flex">
-                                    <a
-                                        href="https://github.com/Ashish8689"
-                                        rel="noreferrer"
-                                        target="_blank"
-                                    >
-                                        <GitHub className="i" />
-                                    </a>
+                                    {SOCIAL_LINKS.map(({ icon, link }) => {
+                                        const Icon = icon
 
-                                    <a
-                                        href="https://www.facebook.com/profile.php?id=100004838256907"
-                                        rel="noreferrer"
-                                        target="_blank"
-                                    >
-                                        <Facebook className="i" />
-                                    </a>
-
-                                    <a
-                                        href="https://www.instagram.com/ashishgupta9394/"
-                                        rel="noreferrer"
-                                        target="_blank"
-                                    >
-                                        <Instagram className="i" />
-                                    </a>
-
-                                    <a
-                                        href="https://wa.me/+918689868867"
-                                        rel="noreferrer"
-                                        target="_blank"
-                                    >
-                                        <WhatsApp className="i" />
-                                    </a>
-
-                                    <a
-                                        href="https://www.linkedin.com/in/ashish-gupta8689"
-                                        rel="noreferrer"
-                                        target="_blank"
-                                    >
-                                        <LinkedIn className="i" />
-                                    </a>
+                                        return (
+                                            <a
+                                                href={link}
+                                                key={link}
+                                                rel="noreferrer"
+                                                target="_blank"
+                                            >
+                                                <Icon className="i" />
+                                            </a>
+                                        )
+                                    })}
                                 </div>
                                 {/* social flex end */}
                             </div>
@@ -103,37 +74,20 @@ const Header: FC = () => {
 
                 <div className="header-social">
                     <div className="social-flex">
-                        <a
-                            href="https://www.facebook.com/profile.php?id=100004838256907"
-                            rel="noreferrer"
-                            target="_blank"
-                        >
-                            <Facebook className="i" />
-                        </a>
+                        {SOCIAL_LINKS.map(({ icon, link }) => {
+                            const Icon = icon
 
-                        <a
-                            href="https://www.instagram.com/ashishgupta9394/"
-                            rel="noreferrer"
-                            target="_blank"
-                        >
-                            <Instagram className="i" />
-                        </a>
-
-                        <a
-                            href="https://wa.me/+918689868867"
-                            rel="noreferrer"
-                            target="_blank"
-                        >
-                            <WhatsApp className="i" />
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/in/ashish-gupta8689"
-                            rel="noreferrer"
-                            target="_blank"
-                        >
-                            <LinkedIn className="i" />
-                        </a>
+                            return (
+                                <a
+                                    href={link}
+                                    key={link}
+                                    rel="noreferrer"
+                                    target="_blank"
+                                >
+                                    <Icon className="i" />
+                                </a>
+                            )
+                        })}
                     </div>
                     {/* social flex end */}
                 </div>

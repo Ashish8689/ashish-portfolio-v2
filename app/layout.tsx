@@ -11,8 +11,10 @@ import './style/hire.css'
 import './style/testimonial.css'
 import './style/contact.css'
 
+// Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/free-mode'
+import 'swiper/css/navigation'
+import 'swiper/css/autoplay'
 
 import Footer from '@/component/Footer/Footer.component'
 import Navbar from '@/component/Navbar/Navbar.component'

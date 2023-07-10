@@ -1,9 +1,5 @@
 import React from 'react'
-import Facebook from '../../svg/Facebook'
-import Instagram from '../../svg/Instagram'
-import WhatsApp from '../../svg/WhatsApp'
-import LinkedIn from '../../svg/LinkedIn'
-import GitHub from '../../svg/github.svg'
+import { SOCIAL_LINKS } from '@/constant/links.constant'
 
 const Footer: React.FC = () => {
     return (
@@ -13,44 +9,20 @@ const Footer: React.FC = () => {
                     <h1>Get in touch with me</h1>
                     <div className="footer-social">
                         <div className="social-flex">
-                            <a
-                                href="https://www.facebook.com/profile.php?id=100004838256907"
-                                rel="noreferrer"
-                                target="_blank"
-                            >
-                                <Facebook className="i" />
-                            </a>
+                            {SOCIAL_LINKS.map(({ icon, link }) => {
+                                const Icon = icon
 
-                            <a
-                                href="https://www.instagram.com/ashishgupta9394/"
-                                rel="noreferrer"
-                                target="_blank"
-                            >
-                                <Instagram className="i" />
-                            </a>
-
-                            <a
-                                href="https://wa.me/+91 8689868867"
-                                rel="noreferrer"
-                            >
-                                <WhatsApp className="i" />
-                            </a>
-
-                            <a
-                                href="https://www.linkedin.com/in/ashishgupta8689/"
-                                rel="noreferrer"
-                                target="_blank"
-                            >
-                                <LinkedIn className="i" />
-                            </a>
-
-                            <a
-                                href="https://github.com/Ashish8689"
-                                rel="noreferrer"
-                                target="_blank"
-                            >
-                                <GitHub className="i" />
-                            </a>
+                                return (
+                                    <a
+                                        href={link}
+                                        key={link}
+                                        rel="noreferrer"
+                                        target="_blank"
+                                    >
+                                        <Icon className="i" />
+                                    </a>
+                                )
+                            })}
                         </div>
                         {/* social flex end */}
                     </div>{' '}
@@ -68,7 +40,6 @@ const Footer: React.FC = () => {
                         rel="noreferrer"
                         target="_blank"
                     >
-                        {' '}
                         Ashish Gupta
                     </a>
                 </p>

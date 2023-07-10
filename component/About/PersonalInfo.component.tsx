@@ -54,7 +54,7 @@ const PersonalInfo: React.FC = () => {
                             icon={<Birthday className="i" />}
                         />
                         <AboutContent
-                            element="BCA"
+                            element="MCA - (Pursuing)"
                             icon={<Degree className="i" />}
                         />
 

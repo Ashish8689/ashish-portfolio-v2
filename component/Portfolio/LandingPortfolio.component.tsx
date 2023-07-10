@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const LandingPortfolio: React.FC = () => {
     return (
-        <div className="landing-portfolio">
+        <div className="landing-portfolio" id="portfolio">
             <div className="container">
                 <h1 className="title">Portfolio</h1>
                 <h2 className="subtitle">My Creative Work</h2>

@@ -85,7 +85,7 @@
 
 .side-menu .nav-list .nav-link:before {
     content: ' ';
-    background-image: url('../../image/arrow.svg');
+    background-image: url('/image/icons/arrow.svg');
     background-repeat: no-repeat;
     width: 10px;
     height: 10px;
@@ -99,7 +99,7 @@
 
 .side-menu .nav-list .nav-link:after {
     content: '';
-    background-image: url('../../image/arrow.svg');
+    background-image: url('/image/icons/arrow.svg');
     background-repeat: no-repeat;
     width: 10px;
     height: 10px;
@@ -133,8 +133,8 @@
     width: 24px;
 }
 
-.side-menu .nav-list a:last-child .nav-link:hover:before,
-.side-menu .nav-list a:last-child .nav-link:hover:after {
+.side-menu .nav-list .nav-link:last-child:hover:before,
+.side-menu .nav-list .nav-link:last-child:hover:after {
     opacity: 0;
 }
 
