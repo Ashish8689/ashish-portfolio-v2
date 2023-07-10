@@ -6,19 +6,38 @@ import Call from '../../svg/Call'
 import CustomImage from '../CustomImage/CustomImage.component'
 
 const Contact: React.FC = () => {
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
+    const formSubmit = (e: React.FormEvent): void => {
+        e.preventDefault()
 
-    //     emailjs.sendForm('service_z4chy2g', 'template_jnu3x6d', e.target, 'user_9K39Uau0LixO1jkRl22bR')
-    //     .then((result) => {
-    //         console.log(result.text);
-    //         alert('Your message is successfully send to Ashish Gupta. Will contact you in next 24hrs 😊');
-    //         e.target.reset();
-    //     }, (error) => {
-    //         console.log(error.text);
-    //         alert("Couldn't send mail. Please contact via call or whatsapp");
-    //     });
-    // };
+        const formEl = document.forms.contactForm
+        const formData = new FormData(formEl)
+
+        const firstName = formData.get('firstName')
+        const lastName = formData.get('lastName')
+        const email = formData.get('email')
+        const phone = formData.get('mobile')
+        const message = formData.get('message')
+
+        const url =
+            'https://wa.me/918689868867?text=' +
+            'First Name: ' +
+            firstName +
+            '%0a' +
+            'Last Name: ' +
+            lastName +
+            '%0a' +
+            'Phone Number: ' +
+            phone +
+            '%0a' +
+            'Email: ' +
+            email +
+            '%0a' +
+            'Message: ' +
+            message
+
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        window.open(url, '_blank')!.focus()
+    }
 
     return (
         <div className="contact-container" id="contact">
@@ -136,12 +155,16 @@ const Contact: React.FC = () => {
 
                     <div className="section-right">
                         <h3>Send a Message</h3>
-                        <form method="POST" onSubmit="sendEmail">
+                        <form
+                            id="contactForm"
+                            method="POST"
+                            onSubmit={formSubmit}
+                        >
                             <div className="form-row">
                                 <div className="form-group">
                                     <input
                                         autoComplete="off"
-                                        name="fname"
+                                        name="firstName"
                                         placeholder="First Name"
                                         type="text"
                                     />
@@ -149,7 +172,7 @@ const Contact: React.FC = () => {
                                 <div className="form-group">
                                     <input
                                         autoComplete="off"
-                                        name="lname"
+                                        name="lastName"
                                         placeholder="Last Name"
                                         type="text"
                                     />
@@ -168,7 +191,7 @@ const Contact: React.FC = () => {
                                 <div className="form-group">
                                     <input
                                         autoComplete="off"
-                                        name="phone"
+                                        name="mobile"
                                         placeholder="Mobile no"
                                         type="text"
                                     />
