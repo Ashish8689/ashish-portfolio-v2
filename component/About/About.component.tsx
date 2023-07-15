@@ -23,10 +23,12 @@ const About: React.FC = () => {
                         <h3>Professional Experience</h3>
                     </div>
 
-                    <AboutTabs
-                        activeTab={activeTab}
-                        onClick={(tab) => setActiveTab(tab)}
-                    />
+                    <div className="d-none-small">
+                        <AboutTabs
+                            activeTab={activeTab}
+                            onClick={(tab) => setActiveTab(tab)}
+                        />
+                    </div>
                 </div>
                 <div className="section-flex">
                     <div className="section-left">
@@ -40,6 +42,13 @@ const About: React.FC = () => {
                     {/* Section left end */}
 
                     <div className="section-right">
+                        <div className="m-t-lg d-none-large">
+                            <AboutTabs
+                                activeTab={activeTab}
+                                onClick={(tab) => setActiveTab(tab)}
+                            />
+                        </div>
+
                         <div className="tab-content">
                             <section
                                 className={`tab-section ${

@@ -27,12 +27,8 @@ h6 {
     margin: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
+html,
 body {
-    /* scroll-behavior: smooth; */
     overflow-x: hidden;
 }
 
@@ -45,6 +41,10 @@ a:hover {
     text-decoration: none !important;
 }
 
+.m-t-lg {
+    margin-top: 24px;
+}
+
 .mx-2 {
     margin: 0 6px;
 }
@@ -53,7 +53,8 @@ a:hover {
     display: block;
 }
 
-.d-none {
+.d-none,
+.d-none-large {
     display: none;
 }
 
@@ -80,6 +81,14 @@ a:hover {
 @media (max-width: 768px) {
     .container {
         max-width: 720px;
+    }
+
+    .d-none-small {
+        display: none;
+    }
+
+    .d-none-large {
+        display: block;
     }
 }
 

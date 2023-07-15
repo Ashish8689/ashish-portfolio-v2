@@ -56,3 +56,21 @@
     transform: translateY(-10px);
     box-shadow: 0 4px 20px rgba(122, 87, 209, 0.2);
 }
+
+/* **********************   Media Query  ************************* */
+
+@media (max-width: 500px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 10px;
+    }
+
+    .skills-block .skills-img-container {
+        width: 45px;
+        height: 45px;
+    }
+
+    .skills-block p {
+        font-size: 14px;
+    }
+}

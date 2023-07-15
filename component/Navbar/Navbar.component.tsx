@@ -1,13 +1,19 @@
 'use client'
 
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { NAV_LINKS, REGEX_SCROLL } from '@/constant/links.constant'
 import GithubIcon from '../../svg/github.svg'
 
+import { usePathname } from 'next/navigation'
+
 const Navbar: React.FC = () => {
     const [isPageScrolling, setIsPageScrolling] = useState(false)
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
+
+    const pathname = usePathname()
+
+    const isLandingPage = useMemo(() => pathname === '/', [pathname])
 
     const changeBackground = useCallback((): void => {
         if (window.scrollY >= 100) {
@@ -23,16 +29,19 @@ const Navbar: React.FC = () => {
         e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
     ): void => {
         setIsHamburgerOpen(false)
-        // first prevent the default behavior
-        e.preventDefault()
-        // get the href and remove everything before the hash (#)
-        const href = e.currentTarget.href
-        const targetId = href.replace(REGEX_SCROLL, '')
-        // get the element by id and use scrollIntoView
-        const elem = document.getElementById(targetId)
-        elem?.scrollIntoView({
-            behavior: 'smooth',
-        })
+
+        if (isLandingPage) {
+            // first prevent the default behavior
+            e.preventDefault()
+            // get the href and remove everything before the hash (#)
+            const href = e.currentTarget.href
+            const targetId = href.replace(REGEX_SCROLL, '')
+            // get the element by id and use scrollIntoView
+            const elem = document.getElementById(targetId)
+            elem?.scrollIntoView({
+                behavior: 'smooth',
+            })
+        }
     }
 
     useEffect(() => {
@@ -54,12 +63,11 @@ const Navbar: React.FC = () => {
                             isHamburgerOpen ? 'nav-list active' : 'nav-list'
                         }
                     >
-                        {NAV_LINKS.map(({ page, link }, index) => (
+                        {NAV_LINKS.map(({ page, link, href_link }) => (
                             <Link
                                 className="nav-link"
-                                href={link}
-                                key={index}
-                                scroll={false}
+                                href={isLandingPage ? link : href_link}
+                                key={page}
                                 onClick={handleNavLinkClick}
                             >
                                 {page}
@@ -88,10 +96,9 @@ const Navbar: React.FC = () => {
                         }
                     />
                 </div>
+                <div className="box-bar" />
+                <div className="circle-round" />
             </div>
-
-            <div className="box-bar" />
-            <div className="circle-round" />
         </div>
     )
 }

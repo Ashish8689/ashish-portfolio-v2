@@ -248,13 +248,14 @@
         flex: 50%;
     }
 
-    .about .dot-line {
-        position: absolute;
-        top: -10px;
-        left: initial;
-        right: 50px;
-        height: 80px;
-        transform: rotate(90deg);
+    .about-header-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .about .img-container {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -274,7 +275,6 @@
     }
 
     .about .img-container {
-        display: grid;
         place-items: center;
     }
 }
