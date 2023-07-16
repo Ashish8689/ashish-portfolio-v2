@@ -15,25 +15,29 @@ const Contact: React.FC = () => {
         const phone = e.target.mobile.value
         const message = e.target.message.value
 
-        const url =
-            'https://wa.me/918689868867?text=' +
-            'First Name: ' +
-            firstName +
-            '%0a' +
-            'Last Name: ' +
-            lastName +
-            '%0a' +
-            'Phone Number: ' +
-            phone +
-            '%0a' +
-            'Email: ' +
-            email +
-            '%0a' +
-            'Message: ' +
-            message
+        if (firstName && lastName && email && phone && message) {
+            const url =
+                'https://wa.me/918689868867?text=' +
+                'First Name: ' +
+                firstName +
+                '%0a' +
+                'Last Name: ' +
+                lastName +
+                '%0a' +
+                'Phone Number: ' +
+                phone +
+                '%0a' +
+                'Email: ' +
+                email +
+                '%0a' +
+                'Message: ' +
+                message
 
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        window.open(url, '_blank')!.focus()
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            window.open(url, '_blank')!.focus()
+        }
+
+        alert('Please fill all fields!')
     }
 
     return (

@@ -4,20 +4,6 @@
     position: relative;
 }
 
-.service .title {
-    text-transform: capitalize;
-    padding-bottom: 10px;
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--bold-color);
-}
-
-.service .subtitle {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--main-color);
-}
-
 .service .para {
     max-width: 550px;
     margin: 0 auto;

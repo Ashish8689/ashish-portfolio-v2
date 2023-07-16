@@ -5,13 +5,14 @@ import { Navigation, Autoplay } from 'swiper/modules'
 import { TESTIMONIAL_LIST } from '@/constant/testimonial.constant'
 import TestimonialItem from './TestimonialItem.component'
 import CustomImage from '../CustomImage/CustomImage.component'
+import { COMPONENT_HEADER } from '@/constant/header.constant'
+import ContentHeader from '../ContentHeader/ContentHeader.component'
 
 const Testimonial: React.FC = () => {
     return (
         <div className="testimonials">
             <div className="container">
-                <h1 className="title">Testimonials</h1>
-                <h2 className="subtitle">Client&apos;s Say</h2>
+                <ContentHeader data={COMPONENT_HEADER.TESTIMONIAL} />
 
                 <Swiper
                     navigation

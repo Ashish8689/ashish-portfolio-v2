@@ -1,0 +1,24 @@
+.content-header {
+    text-align: center;
+}
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.sub-title {
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--bold-color);
+}
+
+/* **********************   Media Query  ************************* */
+
+@media (max-width: 500px) {
+    .sub-title {
+        font-size: 30px;
+    }
+}

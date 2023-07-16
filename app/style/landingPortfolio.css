@@ -3,21 +3,6 @@
     position: relative;
 }
 
-.landing-portfolio .title {
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    color: var(--main-color);
-}
-
-.landing-portfolio .subtitle {
-    font-size: 45px;
-    font-weight: 600;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
 /* ***************  Landing Portfolio Block   ************** */
 
 .landing-portfolio-block {
@@ -146,26 +131,15 @@
 
 /* *******************  Media query  ************************* */
 
-@media only screen and (max-width: 786px) {
+@media (max-width: 786px) {
     .landing-portfolio-block .landing-flex {
         display: block;
     }
 
-    .landing-portfolio-content-container {
-        padding: 0;
-        width: 100%;
-        padding-top: 50px;
-        position: relative;
-        top: initial;
-        left: inherit;
-        text-align: left;
-        transform: inherit;
-        box-shadow: initial;
-    }
-
+    .landing-portfolio-content-container,
     .stack-container {
-        width: 100%;
         padding: 0;
+        width: 100%;
         padding-top: 20px;
         position: relative;
         top: initial;
@@ -182,6 +156,10 @@
 
     .left-40 {
         left: initial;
+    }
+
+    .landing-portfolio-content-container h3 {
+        font-size: 24px;
     }
 }
 

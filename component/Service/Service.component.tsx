@@ -2,15 +2,14 @@ import React, { FC } from 'react'
 import ServiceList from './ServiceList.component'
 import { SERVICE_DATA } from '@/constant/service.constant'
 import CustomImage from '../CustomImage/CustomImage.component'
+import ContentHeader from '../ContentHeader/ContentHeader.component'
+import { COMPONENT_HEADER } from '@/constant/header.constant'
 
 const Service: FC = () => {
     return (
         <div className="service">
             <div className="container">
-                <h1 className="subtitle">Service</h1>
-                <h1 className="title">What we do ?</h1>
-                {/* <p className="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-               Dolorem ea temporibus atque porro impedit!</p> */}
+                <ContentHeader data={COMPONENT_HEADER.SERVICE} />
 
                 <div className="service-grid">
                     {SERVICE_DATA.map((service) => (

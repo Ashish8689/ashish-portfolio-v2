@@ -5,6 +5,8 @@ import CustomImage from '../CustomImage/CustomImage.component'
 import Education from './Education.component'
 import PersonalInfo from './PersonalInfo.component'
 import AboutTabs from './AboutTabs.component'
+import ContentHeader from '../ContentHeader/ContentHeader.component'
+import { COMPONENT_HEADER } from '@/constant/header.constant'
 
 const About: React.FC = () => {
     const [activeTab, setActiveTab] = useState(AboutTab.PERSONAL)
@@ -19,8 +21,7 @@ const About: React.FC = () => {
             <div className="container">
                 <div className="about-header-container">
                     <div className="about-header">
-                        <h4>Why hire me for your next Project</h4>
-                        <h3>Professional Experience</h3>
+                        <ContentHeader data={COMPONENT_HEADER.ABOUT} />
                     </div>
 
                     <div className="d-none-small">
