@@ -26,6 +26,11 @@
     overflow: hidden;
 }
 
+.landing-flex .landing-flex-left .img-container img {
+    height: 100%;
+    image-rendering: crisp-edges;
+}
+
 .landing-flex .landing-flex-left .img-container::before {
     position: absolute;
     content: '';

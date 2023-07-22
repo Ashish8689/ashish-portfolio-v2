@@ -11,6 +11,9 @@ import './style/landingPortfolio.css'
 import './style/hire.css'
 import './style/testimonial.css'
 import './style/contact.css'
+import './style/modal.css'
+
+import './style/portfolio.css'
 
 // Import Swiper styles
 import 'swiper/css'

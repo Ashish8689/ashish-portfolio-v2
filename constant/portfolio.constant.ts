@@ -1,10 +1,12 @@
+export const PROJECTS_TYPE = ['All', 'Next', 'React', 'Static']
+
 export const PROJECTS_LIST = [
     {
         name: 'Vision Fire and Security Systems',
         img: '/image/projects/16.jpg',
         url: 'https://visionfiresecuritysystems.com/',
         githubUrl: 'https://github.com/Ashish8689/Vision-security',
-        type: 'react',
+        type: 'next',
         stack: ['Next js', 'CSS'],
         latest: true,
         description:

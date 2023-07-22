@@ -6,7 +6,7 @@ import OutsideLinkIcon from '../../svg/outside-link.svg'
 import Link from 'next/link'
 
 const LandingPortfolioItem = ({
-    data: { img, name, description, githubUrl, stack },
+    data: { img, name, description, githubUrl, stack, url },
     index,
 }: LandingPortfolioItemProps): React.JSX.Element => {
     const isOdd = useMemo(() => index % 2 !== 0, [index])
@@ -36,7 +36,7 @@ const LandingPortfolioItem = ({
                                 </div>
                             </Link>
 
-                            <Link href={githubUrl}>
+                            <Link href={url}>
                                 <div className="project-icons">
                                     <OutsideLinkIcon className="icon" />
                                 </div>

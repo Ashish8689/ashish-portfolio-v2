@@ -1,0 +1,119 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.modal.enter-done {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.modal.exit {
+    opacity: 0;
+}
+
+.modal-content {
+    margin: 0 10px;
+    width: 600px;
+    height: 550px;
+    background-color: var(--title-color);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-200px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px var(--box-shadow);
+}
+
+.modal-image-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.modal-image-container img {
+    transition: 0.2s ease-in;
+}
+
+.modal-image-container:hover img {
+    transform: scale(1.3);
+}
+
+.modal-image-container .modal-cancel-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--title-color);
+    background: var(--main-color);
+    transition: 0.5 ease-in;
+    cursor: pointer;
+}
+
+.modal-image-container .modal-cancel-icon:hover {
+    opacity: 0.8;
+}
+
+.modal.enter-done .modal-content {
+    transform: translateY(0);
+}
+
+.modal.exit .modal-content {
+    transform: translateY(-200px);
+}
+
+.model-content-container {
+    padding: 20px;
+    height: 270px;
+    overflow: scroll;
+}
+
+.modal-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.model-content-container h1 {
+    font-size: 34px;
+    color: var(--main-color);
+}
+
+.model-content-container h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+    color: var(--bold-color);
+}
+
+.model-content-container p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.model-content-container ul {
+    padding-left: 16px;
+}
+.model-content-container li {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color);
+}
