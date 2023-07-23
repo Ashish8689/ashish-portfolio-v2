@@ -19,4 +19,25 @@ export const COMPONENT_HEADER = {
         title: 'Testimonials',
         subTitle: "Client's Say",
     },
+    OPEN_SOURCE: {
+        title: 'OpenSource',
+        subTitle: 'My OpenSource Contribution',
+    },
+    ORGANIZATION: {
+        title: 'Organization',
+        subTitle: 'My Playground area',
+    },
+
+    PULL_REQUEST_CONTRIBUTED: {
+        title: 'Pull Request',
+        subTitle: 'Latest Pull Request contributed',
+    },
+    ISSUE_CONTRIBUTED: {
+        title: 'Issues',
+        subTitle: 'Latest Issues contributed',
+    },
+    REVIEW_CONTRIBUTED: {
+        title: 'Pull Request Review',
+        subTitle: 'Latest Reviewed Contribution',
+    },
 }

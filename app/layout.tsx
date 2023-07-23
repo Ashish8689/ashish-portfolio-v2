@@ -14,6 +14,7 @@ import './style/contact.css'
 import './style/modal.css'
 
 import './style/portfolio.css'
+import './style/open-source.css'
 
 // Import Swiper styles
 import 'swiper/css'
