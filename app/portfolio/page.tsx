@@ -6,18 +6,19 @@ import { PROJECTS_LIST, PROJECTS_TYPE } from '@/constant/portfolio.constant'
 import PortfolioItem from './PortfolioItem.component'
 
 const Projects: React.FC = () => {
-    const [isotope, setIsotope] = useState(null)
+    const [isotope, setIsotope] = useState<Isotope | null>(null)
     const [filterKey, setFilterKey] = useState('All')
 
-    useEffect(() => {
-        setIsotope(
-            new Isotope('.filter-container', {
-                // filter-container: className of the parent of the isotope elements
-                itemSelector: '.filter-item', // filter-item: className of the isotope elements
-                layoutMode: 'fitRows', // for horizontal isotope
-            })
-        )
-    }, [])
+    useEffect(
+        () =>
+            setIsotope(
+                new Isotope('.filter-container', {
+                    itemSelector: '.filter-item',
+                    layoutMode: 'fitRows',
+                })
+            ),
+        []
+    )
 
     useEffect(() => {
         if (isotope) {
