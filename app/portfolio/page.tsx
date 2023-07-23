@@ -6,7 +6,7 @@ import { PROJECTS_LIST, PROJECTS_TYPE } from '@/constant/portfolio.constant'
 import PortfolioItem from './PortfolioItem.component'
 
 const Projects: React.FC = () => {
-    const [isotope, setIsotope] = useState<Isotope | null>(null)
+    const [isotope, setIsotope] = useState<Isotope>()
     const [filterKey, setFilterKey] = useState('All')
 
     useEffect(

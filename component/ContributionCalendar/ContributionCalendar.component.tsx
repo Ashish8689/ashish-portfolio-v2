@@ -1,7 +1,7 @@
 import { shiftDate } from '@/utils/stats.utils'
 import { ContributionDays } from 'github-user-contribution-summary'
 import React from 'react'
-import ReactCalendarHeatmap from 'react-calendar-heatmap'
+import CalendarHeatmap from 'react-calendar-heatmap'
 
 const ContributionCalendar = ({
     data,
@@ -15,7 +15,7 @@ const ContributionCalendar = ({
             <h2>
                 <span> {totalContribution}</span> Contributions in the last year
             </h2>
-            <ReactCalendarHeatmap
+            <CalendarHeatmap
                 showWeekdayLabels
                 classForValue={(value: ContributionDays) => {
                     if (!value) {
