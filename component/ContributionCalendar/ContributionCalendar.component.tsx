@@ -15,7 +15,7 @@ const ContributionCalendar = ({
             <h2>
                 <span> {totalContribution}</span> Contributions in the last year
             </h2>
-            <CalendarHeatmap
+            {/* <CalendarHeatmap
                 showWeekdayLabels
                 classForValue={(value: ContributionDays) => {
                     if (!value) {
@@ -29,7 +29,7 @@ const ContributionCalendar = ({
                 endDate={new Date()}
                 startDate={shiftDate(new Date(), -365)}
                 values={data ?? []}
-            />
+            /> */}
         </div>
     )
 }

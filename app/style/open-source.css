@@ -41,6 +41,9 @@
 
 /* *************************  Contribution container  *********************** */
 
+.contribution-container {
+    margin-top: 80px;
+}
 .contribution-container .content-header {
     text-align: left;
 }
