@@ -21,6 +21,7 @@
         "isotope-layout": "^3.0.6",
         "next": "13.4.4",
         "react": "18.2.0",
+        "react-calendar-heatmap": "^1.9.0",
         "react-dom": "18.2.0",
         "react-transition-group": "^4.4.5",
         "react-tsparticles": "^2.10.1",
@@ -29,6 +30,7 @@
     "devDependencies": {
         "@svgr/webpack": "^8.0.1",
         "@types/isotope-layout": "^3.0.9",
+        "@types/react-calendar-heatmap": "^1.6.3",
         "@typescript-eslint/eslint-plugin": "^5.59.11",
         "@typescript-eslint/parser": "^5.59.11",
         "eslint": "^8.43.0",

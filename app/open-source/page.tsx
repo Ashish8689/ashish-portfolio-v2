@@ -11,6 +11,7 @@ import { getOpenSourceStatsCount } from '@/utils/stats.utils'
 import Stats from '@/component/Stats/Stats.component'
 import { StatsProps } from '@/component/Stats/Stats.interface'
 import Contribution from '@/component/Contribution/Contribution.component'
+import ContributionCalendar from '@/component/ContributionCalendar/ContributionCalendar.component'
 
 const OpenSource: React.FC = () => {
     const [data, setData] = useState<ContributionSummary>()
@@ -19,15 +20,13 @@ const OpenSource: React.FC = () => {
     const getUserContributionSummary = async (): Promise<void> => {
         const argument = {
             userName: 'Ashish8689',
-            githubToken:
-                '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',
+            githubToken: process.env.GITHUB_TOKEN ?? '',
         }
 
         try {
             const response = await getContributionSummary(argument)
             setData(response)
             setStatsData(getOpenSourceStatsCount(response))
-            console.log(response)
         } catch (error) {
             console.log('Something went wrong', error)
         }
@@ -47,6 +46,11 @@ const OpenSource: React.FC = () => {
                         <Stats data={item} key={item.key} />
                     ))}
                 </div>
+
+                <ContributionCalendar
+                    data={data?.contributionByDate}
+                    totalContribution={data?.totalContributionCount}
+                />
 
                 <div className="contribution-container">
                     <ContentHeader

@@ -1,5 +1,5 @@
 .open-source {
-    padding: 50px 0;
+    padding: 50px 0 0;
 }
 
 .stats-container {
@@ -43,10 +43,10 @@
 
 .contribution-container .content-header {
     text-align: left;
-    padding-top: 80px;
 }
 
 .contribution-block-container {
+    margin-bottom: 60px;
     padding: 20px;
     padding-left: 0;
     width: 100%;
@@ -56,6 +56,9 @@
 }
 .contribution-block {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: var(--title-color);
     margin-bottom: 20px;
     padding: 20px;
@@ -89,4 +92,8 @@
 
 .contribution-block:hover .contribution-links {
     color: var(--main-color);
+}
+.contribution-block .contribution-img-container {
+    width: 28px;
+    height: 28px;
 }

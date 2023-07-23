@@ -21,6 +21,9 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
 
+// Calendar
+import './style/contributionCalendar.css'
+
 import Footer from '@/component/Footer/Footer.component'
 import Navbar from '@/component/Navbar/Navbar.component'
 import ScrollTop from '@/component/ScrollTop/ScrollTop.component'

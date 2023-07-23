@@ -1,6 +1,7 @@
 import React from 'react'
 import { ContributionProps } from './Contribution.interface'
 import Link from 'next/link'
+import CustomImage from '../CustomImage/CustomImage.component'
 
 const Contribution = ({ data }: ContributionProps): React.JSX.Element => {
     return (
@@ -12,6 +13,10 @@ const Contribution = ({ data }: ContributionProps): React.JSX.Element => {
             >
                 {data.title}
             </Link>
+
+            <div className="contribution-img-container">
+                <CustomImage src="https://avatars.githubusercontent.com/u/86132257?v=4" />
+            </div>
         </div>
     )
 }

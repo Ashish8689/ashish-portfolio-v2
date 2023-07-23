@@ -1,0 +1,66 @@
+.github-contribution-calendar {
+    margin: 80px 0;
+    padding: 40px 24px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--box-shadow);
+}
+
+.github-contribution-calendar h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--bold-color);
+    margin-bottom: 20px;
+}
+
+.github-contribution-calendar h2 span {
+    color: var(--main-color);
+}
+
+/*
+ * react-calendar-heatmap styles
+ *
+ * All of the styles in this file are optional and configurable!
+ * The github and gitlab color scales are provided for reference.
+ */
+
+.react-calendar-heatmap text {
+    font-size: 8px;
+    fill: var(--bold-light-color);
+    font-weight: 600;
+}
+
+.react-calendar-heatmap rect:hover {
+    stroke: var(--bold-color);
+    stroke-width: 1px;
+}
+
+/* Default color scale */
+
+.react-calendar-heatmap .color-empty {
+    fill: #eeeeee;
+}
+
+.react-calendar-heatmap .color-filled {
+    fill: #8cc665;
+}
+
+/* Github color scale */
+
+.react-calendar-heatmap .color-github-0 {
+    fill: #eeeeee;
+}
+.react-calendar-heatmap .color-github-1 {
+    fill: #d6e685;
+}
+.react-calendar-heatmap .color-github-2 {
+    fill: #d6e685;
+}
+.react-calendar-heatmap .color-github-3 {
+    fill: #8cc665;
+}
+.react-calendar-heatmap .color-github-4 {
+    fill: #44a340;
+}
+.react-calendar-heatmap .color-github-5 {
+    fill: #1e6823;
+}
