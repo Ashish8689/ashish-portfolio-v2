@@ -47,10 +47,10 @@ const OpenSource: React.FC = () => {
                     ))}
                 </div>
 
-                {/* <ContributionCalendar
+                <ContributionCalendar
                     data={data?.contributionByDate}
                     totalContribution={data?.totalContributionCount}
-                /> */}
+                />
 
                 <div className="contribution-container">
                     <ContentHeader

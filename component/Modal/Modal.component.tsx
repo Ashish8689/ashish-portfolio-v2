@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect } from 'react'
-import { CSSTransition } from 'react-transition-group'
 import CustomImage from '../CustomImage/CustomImage.component'
 import CancelIcon from '../../svg/cancel.svg'
 import { ModalProps } from './Modal.interface'
 import Link from 'next/link'
 import GithubIcon from '../../svg/github.svg'
 import OutsideLinkIcon from '../../svg/outside-link.svg'
+import { CSSTransition } from 'react-transition-group'
 
 const Modal = ({ data, onClose, show }: ModalProps): React.JSX.Element => {
     const { description, img, stack, name, githubUrl, url } = data
