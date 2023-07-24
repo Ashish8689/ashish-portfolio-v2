@@ -2,9 +2,6 @@ import { shiftDate } from '@/utils/stats.utils'
 import { ContributionDays } from 'github-user-contribution-summary'
 import React from 'react'
 import ReactCalendarHeatmap from 'react-calendar-heatmap'
-import { Tooltip as ReactTooltip } from 'react-tooltip'
-
-import 'react-tooltip/dist/react-tooltip.css'
 
 const ContributionCalendar = ({
     data,

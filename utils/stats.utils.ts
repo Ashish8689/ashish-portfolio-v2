@@ -22,7 +22,7 @@ export const getOpenSourceStatsCount = (
     },
     {
         label: 'Followers',
-        key: STATS.PULL_REQUEST,
+        key: STATS.FOLLOWERS,
         count: data.totalFollowers,
     },
     {
