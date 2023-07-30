@@ -1,4 +1,4 @@
-import { ContributionsNodeResource } from 'github-user-contribution-summary'
+import { ContributionsNodeResource } from '@/app/open-source/github.interface'
 
 export interface ContributionProps {
     data: ContributionsNodeResource

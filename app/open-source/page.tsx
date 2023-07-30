@@ -1,30 +1,23 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import {
-    ContributionSummary,
-    getContributionSummary,
-} from 'github-user-contribution-summary'
 import ContentHeader from '@/component/ContentHeader/ContentHeader.component'
-import { COMPONENT_HEADER } from '@/constant/header.constant'
-import { getOpenSourceStatsCount } from '@/utils/stats.utils'
-import Stats from '@/component/Stats/Stats.component'
-import { StatsProps } from '@/component/Stats/Stats.interface'
 import Contribution from '@/component/Contribution/Contribution.component'
 import ContributionCalendar from '@/component/ContributionCalendar/ContributionCalendar.component'
+import Stats from '@/component/Stats/Stats.component'
+import { COMPONENT_HEADER } from '@/constant/header.constant'
+import { getOpenSourceStatsCount } from '@/utils/stats.utils'
+import { ContributionSummary } from './github.interface'
+import { useEffect, useState } from 'react'
+import { StatsProps } from '@/component/Stats/Stats.interface'
+import { getContributionSummary } from '@/rest/github.rest'
 
-const OpenSource: React.FC = () => {
+const OpenSource = async () => {
     const [data, setData] = useState<ContributionSummary>()
     const [statsData, setStatsData] = useState<StatsProps['data'][]>([])
 
     const getUserContributionSummary = async (): Promise<void> => {
-        const argument = {
-            userName: 'Ashish8689',
-            githubToken: process.env.GITHUB_TOKEN ?? '',
-        }
-
         try {
-            const response = await getContributionSummary(argument)
+            const response = await getContributionSummary()
             setData(response)
             setStatsData(getOpenSourceStatsCount(response))
         } catch (error) {

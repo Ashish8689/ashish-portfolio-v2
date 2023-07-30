@@ -15,7 +15,7 @@ export const PROJECTS_LIST = [
     {
         name: 'Find N Vibe',
         img: '/image/projects/13.png',
-        url: 'https://visionfiresecuritysystems.com/',
+        url: 'https://visionfiresecuritysystems.com//',
         githubUrl: 'https://github.com/open-metadata/OpenMetadata',
         stack: ['React js', 'CSS'],
         type: 'react',

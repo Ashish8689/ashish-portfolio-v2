@@ -1,7 +1,7 @@
 import CustomImage from '@/component/CustomImage/CustomImage.component'
 import Modal from '@/component/Modal/Modal.component'
 import React, { useState } from 'react'
-import { PortfolioProps } from './Portfolio.interface'
+import { PortfolioProps } from './portfolio.interface'
 
 const PortfolioItem = ({ data }: PortfolioProps): React.JSX.Element => {
     const { img, type } = data

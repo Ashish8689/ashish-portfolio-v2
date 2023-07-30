@@ -1,4 +1,4 @@
-import { PortfolioProps } from '@/app/portfolio/Portfolio.interface'
+import { PortfolioProps } from '../Portfolio/portfolio.interface'
 
 export interface ModalProps {
     data: PortfolioProps['data']

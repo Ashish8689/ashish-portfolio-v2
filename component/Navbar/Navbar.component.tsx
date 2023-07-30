@@ -74,7 +74,11 @@ const Navbar: React.FC = () => {
                             </Link>
                         ))}
 
-                        <Link className="nav-link" href="/open-source">
+                        <Link
+                            className="nav-link"
+                            href="/open-source"
+                            prefetch={false}
+                        >
                             OpenSource
                         </Link>
 

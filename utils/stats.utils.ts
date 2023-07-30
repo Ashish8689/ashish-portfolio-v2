@@ -1,6 +1,6 @@
+import { ContributionSummary } from '@/app/open-source/github.interface'
 import { StatsProps } from '@/component/Stats/Stats.interface'
 import { STATS } from '@/constant/stats.constant'
-import { ContributionSummary } from 'github-user-contribution-summary'
 
 export const getOpenSourceStatsCount = (
     data: ContributionSummary

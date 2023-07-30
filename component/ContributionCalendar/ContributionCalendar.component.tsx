@@ -1,5 +1,5 @@
+import { ContributionDays } from '@/app/open-source/github.interface'
 import { shiftDate } from '@/utils/stats.utils'
-import { ContributionDays } from 'github-user-contribution-summary'
 import React from 'react'
 import ReactCalendarHeatmap from 'react-calendar-heatmap'
 
