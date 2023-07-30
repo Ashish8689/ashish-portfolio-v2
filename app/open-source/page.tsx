@@ -10,10 +10,12 @@ import { ContributionSummary } from './github.interface'
 import { useEffect, useState } from 'react'
 import { StatsProps } from '@/component/Stats/Stats.interface'
 import { getContributionSummary } from '@/rest/github.rest'
+import Loading from './loading'
 
 const OpenSource: React.FC = () => {
     const [data, setData] = useState<ContributionSummary>()
     const [statsData, setStatsData] = useState<StatsProps['data'][]>([])
+    const [isLoading, setIsLoading] = useState(true)
 
     const getUserContributionSummary = async (): Promise<void> => {
         try {
@@ -22,12 +24,18 @@ const OpenSource: React.FC = () => {
             setStatsData(getOpenSourceStatsCount(response))
         } catch (error) {
             console.log('Something went wrong', error)
+        } finally {
+            setIsLoading(false)
         }
     }
 
     useEffect(() => {
         getUserContributionSummary()
     }, [])
+
+    if (isLoading) {
+        return <Loading />
+    }
 
     return (
         <div className="open-source">

@@ -1,12 +1,14 @@
 import CustomImage from '@/component/CustomImage/CustomImage.component'
 import React from 'react'
 
-const loading: React.FC = () => {
+const Loading: React.FC = () => {
     return (
-        <div className="loading">
-            <CustomImage src="/image/loading.gif" />
+        <div className="loading-container">
+            <div className="loading">
+                <CustomImage src="/image/loading.gif" />
+            </div>
         </div>
     )
 }
 
-export default loading
+export default Loading
