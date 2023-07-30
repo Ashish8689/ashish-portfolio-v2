@@ -22,8 +22,7 @@ export const getContributionSummary =
     async (): Promise<ContributionSummary> => {
         const { userName, githubToken } = {
             userName: 'Ashish8689',
-            githubToken:
-                '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',
+            githubToken: process.env.GITHUB_TOKEN ?? '',
         }
 
         const query = GITHUB_USER_RESOURCE_QUERY.replace(

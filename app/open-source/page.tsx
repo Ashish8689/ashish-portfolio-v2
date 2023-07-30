@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react'
 import { StatsProps } from '@/component/Stats/Stats.interface'
 import { getContributionSummary } from '@/rest/github.rest'
 
-const OpenSource = async () => {
+const OpenSource: React.FC = () => {
     const [data, setData] = useState<ContributionSummary>()
     const [statsData, setStatsData] = useState<StatsProps['data'][]>([])
 

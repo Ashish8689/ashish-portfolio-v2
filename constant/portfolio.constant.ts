@@ -1,4 +1,4 @@
-export const PROJECTS_TYPE = ['All', 'Next', 'React', 'Static']
+export const PROJECTS_TYPE = ['all', 'next', 'react', 'static']
 
 export const PROJECTS_LIST = [
     {
