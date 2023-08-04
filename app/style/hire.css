@@ -31,7 +31,7 @@
     text-align: center;
 }
 
-/* ************************   Amination start   ********************** */
+/* ************************   Animation start   ********************** */
 
 .middle-container .light-wave {
     position: absolute;
@@ -177,6 +177,7 @@
 @media (max-width: 500px) {
     .middle-container {
         margin-bottom: 10px;
+        height: 300px;
     }
 
     .middle-section {

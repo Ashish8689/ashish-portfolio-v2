@@ -3,7 +3,7 @@ import React from 'react'
 
 const Loading: React.FC = () => {
     return (
-        <div className="loading-container">
+        <div className="open-source-loading">
             <div className="loading">
                 <CustomImage src="/image/loading.gif" />
             </div>
