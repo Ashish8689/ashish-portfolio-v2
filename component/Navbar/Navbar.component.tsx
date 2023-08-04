@@ -63,10 +63,10 @@ const Navbar: React.FC = () => {
                             isHamburgerOpen ? 'nav-list active' : 'nav-list'
                         }
                     >
-                        {NAV_LINKS.map(({ page, link, href_link }) => (
+                        {NAV_LINKS.map(({ page, link }) => (
                             <Link
                                 className="nav-link"
-                                href={isLandingPage ? link : href_link}
+                                href={isLandingPage ? link : '/'}
                                 key={page}
                                 onClick={handleNavLinkClick}
                             >

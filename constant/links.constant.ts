@@ -9,22 +9,18 @@ export const NAV_LINKS = [
     {
         page: 'Home',
         link: '#home',
-        href_link: '/',
     },
     {
         page: 'About',
         link: '#about',
-        href_link: '/#about',
     },
     {
         page: 'Portfolio',
         link: '#portfolio',
-        href_link: '/#portfolio',
     },
     {
         page: 'Contact',
         link: '#contact',
-        href_link: '/#contact',
     },
 ]
 

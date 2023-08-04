@@ -41,11 +41,11 @@ export const metadata = {
         siteName: 'Ashish Gupta',
         images: [
             {
-                url: `${HOST_PORT}/image/ogimages/cover.png`,
+                url: `${HOST_PORT}/image/ogimages/cover.jpg`,
                 width: 1200,
                 height: 600,
                 alt: 'ashish gupta',
-                type: 'image/png',
+                type: 'image/jpg',
             },
         ],
     },
