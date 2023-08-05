@@ -33,48 +33,84 @@ export const metadata = {
     title: 'Ashish Gupta | Software Engineer',
     description:
         'Experienced Software Engineer based in Mumbai who focus on Client Satisfaction.',
+
+    generator: 'Next.js',
+    applicationName: 'Ashish Gupta Portfolio',
+    referrer: 'origin-when-cross-origin',
+    keywords: META_KEYWORDS,
+    authors: [{ name: 'Ashish Gupta' }, { name: 'Ashish', url: HOST_PORT }],
+    creator: 'Ashish Gupta',
+    publisher: 'Ashish Gupta',
+    formatDetection: {
+        email: true,
+        address: true,
+        telephone: true,
+    },
     openGraph: {
-        title: 'Ashish Gupta',
+        title: 'Ashish Gupta | Software Engineer',
         description:
             'Experienced Software Engineer based in Mumbai who focus on Client Satisfaction.',
         url: HOST_PORT,
         siteName: 'Ashish Gupta',
         images: [
             {
-                url: `${HOST_PORT}/image/ogimages/cover.jpg`,
+                url: `${HOST_PORT}image/ogimages/cover.jpg`,
                 width: 1200,
                 height: 600,
-                alt: 'ashish gupta',
+                alt: 'Ashish gupta',
                 type: 'image/jpg',
             },
         ],
+        locale: 'en_US',
+        type: 'website',
     },
+    manifest: 'https://nextjs.org/manifest.json',
+    themeColor: '#7a57d1',
     canonical: HOST_PORT,
-    additionalLinkTags: [
-        {
-            rel: 'icon',
-            href: `${HOST_PORT}/favicon.ico`,
+    robots: {
+        index: false,
+        follow: true,
+        nocache: true,
+        googleBot: {
+            index: true,
+            follow: false,
+            noimageindex: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
         },
-        {
-            rel: 'apple-touch-icon',
-            href: `${HOST_PORT}/favicon.ico`,
+    },
+    icons: {
+        icon: '/favicon.ico',
+        shortcut: '/favicon.ico',
+        apple: '/apple-touch-icon.png',
+        other: {
+            rel: 'apple-touch-icon-precomposed',
+            url: '/apple-touch-icon.png',
         },
-    ],
-    additionalMetaTags: [
-        {
-            property: 'keywords',
-            name: 'keywords',
-            content: META_KEYWORDS,
-        },
-        {
-            property: 'author',
-            name: 'author',
-            content: 'Ashish Gupta',
-        },
-    ],
+    },
     twitter: {
-        site: '@theashishgupta',
-        cardType: 'summary_large_image',
+        card: 'app',
+        title: 'Ashish Gupta | Software Engineer',
+        description:
+            'Experienced Software Engineer based in Mumbai who focus on Client Satisfaction.',
+        creator: '@Ashish_G8689',
+        images: {
+            url: `${HOST_PORT}image/ogimages/cover.jpg`,
+            alt: 'Ashish Gupta logo',
+        },
+        app: {
+            name: 'twitter_app',
+            id: {
+                iphone: 'twitter_app://iphone',
+                ipad: 'twitter_app://ipad',
+                googleplay: 'twitter_app://googleplay',
+            },
+            url: {
+                iphone: 'https://iphone_url',
+                ipad: 'https://ipad_url',
+            },
+        },
     },
 }
 
