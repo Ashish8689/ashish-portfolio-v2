@@ -23,6 +23,7 @@ import 'swiper/css/autoplay'
 
 // Calendar
 import './style/contributionCalendar.css'
+import 'react-calendar-heatmap/dist/styles.css'
 
 import Footer from '@/component/Footer/Footer.component'
 import Navbar from '@/component/Navbar/Navbar.component'

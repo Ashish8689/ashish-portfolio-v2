@@ -263,6 +263,8 @@
     position: absolute;
     bottom: 20%;
     left: 40%;
+    width: 20px;
+    height: 20px;
     opacity: 0.3;
     animation: move 20s linear infinite;
     z-index: -1;
