@@ -14,8 +14,10 @@ const Contribution = ({ data }: ContributionProps): React.JSX.Element => {
                 {data.title}
             </Link>
 
+            {/* <div className="contribution-block-image-section"> */}
             <div className="contribution-img-container">
                 <CustomImage src="https://avatars.githubusercontent.com/u/86132257?v=4" />
+                {/* </div> */}
             </div>
         </div>
     )

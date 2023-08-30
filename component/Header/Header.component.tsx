@@ -1,8 +1,15 @@
-import React, { FC } from 'react'
+import React, { FC, useCallback } from 'react'
 import CustomImage from '../CustomImage/CustomImage.component'
 import { SOCIAL_LINKS } from '@/constant/links.constant'
+import Particles from 'react-tsparticles'
+import { loadFull } from 'tsparticles'
+import { Engine } from 'tsparticles-engine'
 
 const Header: FC = () => {
+    const particlesInit = useCallback(async (engine: Engine) => {
+        await loadFull(engine)
+    }, [])
+
     return (
         <div className="header" id="home">
             <div className="container">
@@ -55,10 +62,7 @@ const Header: FC = () => {
                                 <a
                                     download
                                     className="button"
-                                    href={
-                                        process.env.PUBLIC_URL +
-                                        '/image/CV_ASHISH_GUPTA.pdf'
-                                    }
+                                    href="/image/CV-ASHISH-GUPTA.pdf"
                                 >
                                     Download CV
                                 </a>
@@ -96,6 +100,50 @@ const Header: FC = () => {
                     <h6>Scroll down</h6>
                 </div>
             </div>
+
+            <Particles
+                className="particles-container"
+                id="ts-particles"
+                init={particlesInit}
+                options={{
+                    particles: {
+                        color: {
+                            value: [
+                                '#BD10E0',
+                                '#B8E986',
+                                '#50E3C2',
+                                '#7a57d1',
+                                '#E86363',
+                            ],
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1,
+                        },
+                        number: {
+                            value: 90,
+                            density: {
+                                enable: true,
+                                area: 1000,
+                            },
+                        },
+                        opacity: {
+                            value: 0.3,
+                        },
+                        size: {
+                            value: 7,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 3,
+                            },
+                        },
+                    },
+                    fullScreen: {
+                        enable: false,
+                    },
+                }}
+            />
 
             {/* *************  Animation overlay   ********************** */}
 

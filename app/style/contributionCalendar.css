@@ -64,3 +64,9 @@
 .react-calendar-heatmap .color-github-5 {
     fill: #1e6823;
 }
+
+@media (max-width: 500px) {
+    .github-contribution-calendar h2 {
+        font-size: 18px;
+    }
+}

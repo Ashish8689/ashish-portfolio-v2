@@ -59,7 +59,7 @@ export const metadata = {
                 width: 1200,
                 height: 600,
                 alt: 'Ashish gupta',
-                type: 'image/jpg',
+                type: 'image/jpeg',
             },
         ],
         locale: 'en_US',
@@ -99,6 +99,7 @@ export const metadata = {
         images: {
             url: `${HOST_PORT}image/ogimages/cover.jpg`,
             alt: 'Ashish Gupta logo',
+            type: 'image/jpeg',
         },
         app: {
             name: 'twitter_app',
