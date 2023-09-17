@@ -59,7 +59,12 @@ export const metadata = {
                 width: 1200,
                 height: 600,
                 alt: 'Ashish gupta',
-                type: 'image/jpeg',
+            },
+            {
+                url: `${HOST_PORT}image/ogimages/cover.jpg`,
+                width: 1800,
+                height: 1600,
+                alt: 'Ashish gupta',
             },
         ],
         locale: 'en_US',

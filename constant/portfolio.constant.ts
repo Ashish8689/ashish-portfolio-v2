@@ -15,7 +15,7 @@ export const PROJECTS_LIST = [
     {
         name: 'Find N Vibe',
         img: '/image/projects/13.png',
-        url: 'https://visionfiresecuritysystems.com//',
+        url: 'https://findnvibe.netlify.app/',
         githubUrl: 'https://github.com/open-metadata/OpenMetadata',
         stack: ['React js', 'CSS'],
         type: 'react',
@@ -26,7 +26,7 @@ export const PROJECTS_LIST = [
     {
         name: 'KTR Machinery',
         img: '/image/projects/14.png',
-        url: 'https://ktrmachinery.com/',
+        url: 'https://ktr-machinery.netlify.app/',
         type: 'next',
         githubUrl: 'https://github.com/Ashish8689/KTR_nextjs',
         stack: ['Next js', 'CSS'],
