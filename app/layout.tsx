@@ -29,8 +29,11 @@ import Footer from '@/component/Footer/Footer.component'
 import Navbar from '@/component/Navbar/Navbar.component'
 import ScrollTop from '@/component/ScrollTop/ScrollTop.component'
 import { HOST_PORT, META_KEYWORDS } from '@/constant/meta.constant'
+import { Metadata } from 'next'
+import { Suspense } from 'react'
+import CustomImage from '@/component/CustomImage/CustomImage.component'
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'Ashish Gupta | Software Engineer',
     description:
         'Experienced Software Engineer based in Mumbai who focus on Client Satisfaction.',
@@ -56,6 +59,12 @@ export const metadata = {
         images: [
             {
                 url: `${HOST_PORT}image/ogimages/cover.jpg`,
+                width: 600,
+                height: 300,
+                alt: 'Ashish gupta',
+            },
+            {
+                url: `${HOST_PORT}image/ogimages/cover.jpg`,
                 width: 1200,
                 height: 600,
                 alt: 'Ashish gupta',
@@ -70,9 +79,8 @@ export const metadata = {
         locale: 'en_US',
         type: 'website',
     },
-    manifest: 'https://nextjs.org/manifest.json',
+    // manifest: 'https://nextjs.org/manifest.json',
     themeColor: '#7a57d1',
-    canonical: HOST_PORT,
     robots: {
         index: false,
         follow: true,
