@@ -26,7 +26,7 @@ const LandingPortfolio: React.FC = () => {
                 <div className="text-center">
                     <Link
                         className="button link-button"
-                        href="/portfolio"
+                        href="portfolio"
                         prefetch={false}
                     >
                         View All Projects

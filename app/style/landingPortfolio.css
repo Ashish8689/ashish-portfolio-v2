@@ -71,6 +71,7 @@
     border-radius: 10px;
     text-align: right;
     box-shadow: 0 4px 20px rgba(122, 87, 209, 0.2);
+    z-index: 1;
 }
 
 .landing-portfolio-content-container h3 {

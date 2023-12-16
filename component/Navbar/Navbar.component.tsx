@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
                         {NAV_LINKS.map(({ page, link }) => (
                             <Link
                                 className="nav-link"
-                                href={isLandingPage ? link : '/'}
+                                href={isLandingPage ? link : ''}
                                 key={page}
                                 onClick={handleNavLinkClick}
                             >
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
 
                         <Link
                             className="nav-link"
-                            href="/open-source"
+                            href="open-source"
                             prefetch={false}
                         >
                             OpenSource
