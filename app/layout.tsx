@@ -30,6 +30,7 @@ import Navbar from '@/component/Navbar/Navbar.component'
 import ScrollTop from '@/component/ScrollTop/ScrollTop.component'
 import { HOST_PORT, META_KEYWORDS } from '@/constant/meta.constant'
 import { Metadata } from 'next'
+import GoogleAnalytics from './GoogleAnalytics'
 
 export const metadata: Metadata = {
     title: 'Ashish Gupta | Software Engineer',
@@ -139,6 +140,8 @@ const RootLayout = ({
                 {children}
                 <Footer />
                 <ScrollTop />
+                {/* Google Analytics for capturing site traffic */}
+                <GoogleAnalytics />
             </body>
         </html>
     )
