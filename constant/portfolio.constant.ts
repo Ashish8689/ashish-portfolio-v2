@@ -4,7 +4,8 @@ export const PROJECTS_LIST = [
     {
         name: 'Vision Fire and Security Systems',
         img: '/image/projects/16.jpg',
-        url: 'https://visionfiresecuritysystems.com/',
+        // url: 'https://visionfiresecuritysystems.com/',
+        url: 'https://sage-profiterole-26a2bd.netlify.app/',
         githubUrl: 'https://github.com/Ashish8689/Vision-security',
         type: 'next',
         stack: ['Next js', 'CSS'],

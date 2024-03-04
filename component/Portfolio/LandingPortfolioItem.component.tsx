@@ -36,7 +36,7 @@ const LandingPortfolioItem = ({
                                 </div>
                             </Link>
 
-                            <Link href={url}>
+                            <Link href={url} target="_blank">
                                 <div className="project-icons">
                                     <OutsideLinkIcon className="icon" />
                                 </div>
