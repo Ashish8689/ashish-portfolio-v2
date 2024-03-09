@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useState } from 'react'
 
 import { AboutTab } from './about.interface'
 import CustomImage from '../CustomImage/CustomImage.component'
@@ -7,14 +7,10 @@ import PersonalInfo from './PersonalInfo.component'
 import AboutTabs from './AboutTabs.component'
 import ContentHeader from '../ContentHeader/ContentHeader.component'
 import { COMPONENT_HEADER } from '@/constant/header.constant'
+import Company from './Company/Company.component'
 
 const About: React.FC = () => {
     const [activeTab, setActiveTab] = useState(AboutTab.PERSONAL)
-
-    const isPersonalActive = useMemo(
-        () => activeTab === AboutTab.PERSONAL,
-        [activeTab]
-    )
 
     return (
         <div className="about" id="about">
@@ -53,7 +49,7 @@ const About: React.FC = () => {
                         <div className="tab-content">
                             <section
                                 className={`tab-section ${
-                                    isPersonalActive && 'active'
+                                    activeTab === AboutTab.PERSONAL && 'active'
                                 }`}
                             >
                                 <PersonalInfo />
@@ -61,10 +57,18 @@ const About: React.FC = () => {
 
                             <section
                                 className={`tab-section ${
-                                    !isPersonalActive && 'active'
+                                    activeTab === AboutTab.EDUCATION && 'active'
                                 }`}
                             >
                                 <Education />
+                            </section>
+
+                            <section
+                                className={`tab-section ${
+                                    activeTab === AboutTab.COMPANY && 'active'
+                                }`}
+                            >
+                                <Company />
                             </section>
                         </div>
                     </div>

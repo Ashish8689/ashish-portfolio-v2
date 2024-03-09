@@ -7,6 +7,8 @@ import Person from '../../svg/Person'
 import Mail from '../../svg/Mail'
 import Call from '../../svg/Call'
 import Location from '../../svg/Location'
+import Link from 'next/link'
+import { SOCIAL_LINKS } from '@/constant/links.constant'
 
 const PersonalInfo: React.FC = () => {
     return (
@@ -14,13 +16,15 @@ const PersonalInfo: React.FC = () => {
             <div className="content">
                 <h1 className="title">
                     For over 2+ year I have successfully providing best services
-                    to my clients and company.
+                    to my Companies and Clients.
                 </h1>
                 <p className="para">
-                    I am Ashish Gupta, a Software Engineer based in Mumbai who
-                    brings your visualization in reality and build a website
-                    that increase your business. I&apos;m available for
-                    Freelance work and projects.
+                    If you&apos;re looking for a Software Engineer who is
+                    passionate about creating exceptional user experiences and
+                    delivering high-quality, scalable solutions, then please
+                    don&apos;t hesitate to get in touch. I would love to hear
+                    about your project and discuss how I can help you achieve
+                    your goals.
                 </p>
 
                 <div className="section-flex">
@@ -54,7 +58,7 @@ const PersonalInfo: React.FC = () => {
                             icon={<Birthday className="i" />}
                         />
                         <AboutContent
-                            element="MCA - (Pursuing)"
+                            element="MSC.CA - (Pursuing)"
                             icon={<Degree className="i" />}
                         />
 
@@ -67,7 +71,13 @@ const PersonalInfo: React.FC = () => {
                 </div>
             </div>
 
-            <div className="button">Know more about me</div>
+            <Link
+                className="button"
+                href={SOCIAL_LINKS.LINKEDIN}
+                target="_blank"
+            >
+                Know more about me
+            </Link>
         </div>
     )
 }

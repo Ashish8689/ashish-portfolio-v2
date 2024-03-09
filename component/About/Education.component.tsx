@@ -5,8 +5,8 @@ import EducationItem from './EducationItem.component'
 const Education: React.FC = () => {
     return (
         <div className="education-container">
-            {[...EDUCATION_DETAILS].reverse().map((data, index) => (
-                <EducationItem data={data} key={index} />
+            {EDUCATION_DETAILS.reverse().map((data) => (
+                <EducationItem data={data} key={data.degree} />
             ))}
         </div>
     )

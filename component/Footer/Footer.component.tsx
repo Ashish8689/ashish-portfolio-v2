@@ -1,5 +1,5 @@
 import React from 'react'
-import { SOCIAL_LINKS } from '@/constant/links.constant'
+import { SOCIAL_LINK_OPTIONS } from '@/constant/links.constant'
 
 const Footer: React.FC = () => {
     return (
@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
                     <h1>Get in touch with me</h1>
                     <div className="footer-social">
                         <div className="social-flex">
-                            {SOCIAL_LINKS.map(({ icon, link }) => {
+                            {SOCIAL_LINK_OPTIONS.map(({ icon, link }) => {
                                 const Icon = icon
 
                                 return (

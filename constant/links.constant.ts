@@ -5,6 +5,15 @@ import LinkedIn from '../svg/linkedIn.svg'
 import GitHub from '../svg/github.svg'
 import Twitter from '../svg/twitter.svg'
 
+export enum SOCIAL_LINKS {
+    GITHUB = 'https://github.com/Ashish8689',
+    LINKEDIN = 'https://www.linkedin.com/in/ashish-gupta8689',
+    TWITTER = 'https://twitter.com/Ashish_G8689',
+    INSTAGRAM = 'https://www.instagram.com/ashishgupta9394/',
+    WHATSAPP = 'https://wa.me/+918689868867',
+    FACEBOOK = 'https://www.facebook.com/profile.php?id=100004838256907',
+}
+
 export const NAV_LINKS = [
     {
         page: 'Home',
@@ -24,30 +33,30 @@ export const NAV_LINKS = [
     },
 ]
 
-export const SOCIAL_LINKS = [
+export const SOCIAL_LINK_OPTIONS = [
     {
         icon: GitHub,
-        link: 'https://github.com/Ashish8689',
+        link: SOCIAL_LINKS.GITHUB,
     },
     {
         icon: LinkedIn,
-        link: 'https://www.linkedin.com/in/ashish-gupta8689',
+        link: SOCIAL_LINKS.LINKEDIN,
     },
     {
         icon: Twitter,
-        link: 'https://twitter.com/Ashish_G8689',
+        link: SOCIAL_LINKS.TWITTER,
     },
     {
         icon: Instagram,
-        link: 'https://www.instagram.com/ashishgupta9394/',
+        link: SOCIAL_LINKS.INSTAGRAM,
     },
     {
         icon: WhatsApp,
-        link: 'https://wa.me/+918689868867',
+        link: SOCIAL_LINKS.WHATSAPP,
     },
     {
         icon: Facebook,
-        link: 'https://www.facebook.com/profile.php?id=100004838256907',
+        link: SOCIAL_LINKS.FACEBOOK,
     },
 ]
 

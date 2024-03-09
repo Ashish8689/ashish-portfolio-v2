@@ -10,8 +10,7 @@ export const PROJECTS_LIST = [
         type: 'next',
         stack: ['Next js', 'CSS'],
         latest: true,
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sequi cupiditate at omnis eligendi obcaecati illo similique quibusdam assumenda laboriosam.',
+        description: `Vision Fire & Security System are one of the leading Fire Protection and Security System Engineers having many years of Market Experience. We listen to our customers intently to Delight them through our service.`,
     },
     {
         name: 'Find N Vibe',
@@ -21,8 +20,7 @@ export const PROJECTS_LIST = [
         stack: ['React js', 'CSS'],
         type: 'react',
         latest: true,
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sequi cupiditate at omnis eligendi obcaecati illo similique quibusdam assumenda laboriosam.',
+        description: `Travel is the main thing you purchase that makes you more extravagant. We, at Find N Vibe Tours and Events Private Limited, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly.`,
     },
     {
         name: 'KTR Machinery',
@@ -43,8 +41,7 @@ export const PROJECTS_LIST = [
         latest: true,
         githubUrl: 'https://github.com/Ashish8689/food',
         stack: ['Html', 'CSS', 'Javascript'],
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sequi cupiditate at omnis eligendi obcaecati illo similique quibusdam assumenda laboriosam.',
+        description: `The best comfort food will always be greens,cornbread and fried chicken. When a man's stomach is full it makes no difference whether he is rich or poor.`,
     },
     {
         name: 'Memory Game',
@@ -87,8 +84,8 @@ export const PROJECTS_LIST = [
         latest: true,
         githubUrl: 'https://github.com/Ashish8689/Fitclick',
         stack: ['Html', 'CSS', 'Javascript'],
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sequi cupiditate at omnis eligendi obcaecati illo similique quibusdam assumenda laboriosam.',
+        description: `Join Legends of Fitness World. Challenge your friend
+            stop doing your sport alone and challenge your friend who will be the Best.`,
     },
     {
         name: 'Gym Management',

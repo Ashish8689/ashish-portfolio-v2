@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 export enum AboutTab {
     PERSONAL = 'personal',
     EDUCATION = 'education',
+    COMPANY = 'company',
 }
 export interface AboutContentProps {
     icon: any

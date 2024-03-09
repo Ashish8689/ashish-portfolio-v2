@@ -8,14 +8,14 @@ const AboutTabs = ({
 }: AboutTabsProps): React.JSX.Element => {
     return (
         <ul className="tabs">
-            {ABOUT_TABS.map(({ tab, label }, index) => (
-                <li
+            {ABOUT_TABS.map(({ tab, label }) => (
+                <button
                     className={`tab button ${activeTab == tab && 'active'}`}
-                    key={index}
+                    key={tab}
                     onClick={() => onClick(tab)}
                 >
                     {label}
-                </li>
+                </button>
             ))}
         </ul>
     )

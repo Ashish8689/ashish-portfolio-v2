@@ -1,6 +1,6 @@
 import React, { FC, useCallback } from 'react'
 import CustomImage from '../CustomImage/CustomImage.component'
-import { SOCIAL_LINKS } from '@/constant/links.constant'
+import { SOCIAL_LINK_OPTIONS } from '@/constant/links.constant'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 import { Engine } from 'tsparticles-engine'
@@ -17,37 +17,40 @@ const Header: FC = () => {
                     <div className="section-left">
                         <div className="content">
                             <h1 className="title-head">
-                                {'<'}Hii{'>'}{' '}
+                                {'<'}Hii{'>'}
                             </h1>
                             <h1 className="title">
-                                This is <span>Ashish </span>
+                                This is <span>Ashish</span>
                             </h1>
                             <h2 className="subtitle">Software Engineer</h2>
                             <p className="para">
-                                {' '}
-                                <span>{'<p>'}</span> I am an experienced
-                                developer based in Mumbai who focus on writing
-                                clean,elegant and efficient code. I&apos;m
-                                available for Freelance work and projects.{' '}
-                                <span> {'<p> '}</span>{' '}
+                                <span>{'<p>'}</span> I am a Software Engineer
+                                and OpenSource Contributor based in
+                                India(Mumbai) who focus on writing clean,
+                                elegant and efficient code. I learn on my own
+                                and stay consistent, believing in the learning
+                                process more than just results.
+                                <span> {'<p> '}</span>
                             </p>
 
                             <div className="content-social header-social">
                                 <div className="social-flex">
-                                    {SOCIAL_LINKS.map(({ icon, link }) => {
-                                        const Icon = icon
+                                    {SOCIAL_LINK_OPTIONS.map(
+                                        ({ icon, link }) => {
+                                            const Icon = icon
 
-                                        return (
-                                            <a
-                                                href={link}
-                                                key={link}
-                                                rel="noreferrer"
-                                                target="_blank"
-                                            >
-                                                <Icon className="i" />
-                                            </a>
-                                        )
-                                    })}
+                                            return (
+                                                <a
+                                                    href={link}
+                                                    key={link}
+                                                    rel="noreferrer"
+                                                    target="_blank"
+                                                >
+                                                    <Icon className="i" />
+                                                </a>
+                                            )
+                                        }
+                                    )}
                                 </div>
                                 {/* social flex end */}
                             </div>
@@ -78,7 +81,7 @@ const Header: FC = () => {
 
                 <div className="header-social">
                     <div className="social-flex">
-                        {SOCIAL_LINKS.map(({ icon, link }) => {
+                        {SOCIAL_LINK_OPTIONS.map(({ icon, link }) => {
                             const Icon = icon
 
                             return (

@@ -2,7 +2,11 @@
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
-import { NAV_LINKS, REGEX_SCROLL } from '@/constant/links.constant'
+import {
+    NAV_LINKS,
+    REGEX_SCROLL,
+    SOCIAL_LINKS,
+} from '@/constant/links.constant'
 import GithubIcon from '../../svg/github.svg'
 
 import { usePathname } from 'next/navigation'
@@ -84,7 +88,7 @@ const Navbar: React.FC = () => {
 
                         <Link
                             className="nav-link"
-                            href="https://github.com/Ashish8689"
+                            href={SOCIAL_LINKS.GITHUB}
                             target="_blank"
                         >
                             <GithubIcon className="github" />
