@@ -33,6 +33,7 @@ import { Metadata } from 'next'
 import GoogleAnalytics from './GoogleAnalytics'
 
 export const metadata: Metadata = {
+    metadataBase: new URL(HOST_PORT),
     title: 'Ashish Gupta | Software Engineer',
     description:
         'Experienced Software Engineer based in Mumbai who focus on Client Satisfaction.',
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     applicationName: 'Ashish Gupta Portfolio',
     referrer: 'origin-when-cross-origin',
     keywords: META_KEYWORDS,
-    authors: [{ name: 'Ashish Gupta' }, { name: 'Ashish', url: HOST_PORT }],
+    authors: [{ name: 'Ashish', url: HOST_PORT }],
     creator: 'Ashish Gupta',
     publisher: 'Ashish Gupta',
     formatDetection: {
@@ -57,19 +58,19 @@ export const metadata: Metadata = {
         siteName: 'Ashish Gupta',
         images: [
             {
-                url: `${HOST_PORT}image/ogimages/cover.jpg`,
+                url: '/image/ogimages/cover.jpg',
                 width: 600,
                 height: 300,
                 alt: 'Ashish gupta',
             },
             {
-                url: `${HOST_PORT}image/ogimages/cover.jpg`,
+                url: '/image/ogimages/cover.jpg',
                 width: 1200,
                 height: 600,
                 alt: 'Ashish gupta',
             },
             {
-                url: `${HOST_PORT}image/ogimages/cover.jpg`,
+                url: '/image/ogimages/cover.jpg',
                 width: 1800,
                 height: 1600,
                 alt: 'Ashish gupta',
@@ -109,7 +110,7 @@ export const metadata: Metadata = {
             'Experienced Software Engineer based in Mumbai who focus on Client Satisfaction.',
         creator: '@Ashish_G8689',
         images: {
-            url: `${HOST_PORT}image/ogimages/cover.jpg`,
+            url: '/image/ogimages/cover.jpg',
             alt: 'Ashish Gupta logo',
             type: 'image/jpeg',
         },
