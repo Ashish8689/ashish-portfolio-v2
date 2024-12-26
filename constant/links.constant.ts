@@ -7,7 +7,7 @@ import Twitter from '../svg/twitter.svg'
 
 export enum SOCIAL_LINKS {
     GITHUB = 'https://github.com/Ashish8689',
-    LINKEDIN = 'https://www.linkedin.com/in/ashish-gupta8689',
+    LINKEDIN = 'https://www.linkedin.com/in/ashish8689',
     TWITTER = 'https://twitter.com/Ashish_G8689',
     INSTAGRAM = 'https://www.instagram.com/ashishgupta9394/',
     WHATSAPP = 'https://wa.me/+918689868867',
