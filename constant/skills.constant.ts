@@ -60,6 +60,18 @@ export const SKILLS_LIST = [
         icon: '/image/skills/axios.png',
     },
     {
+        stack: 'Cypress',
+        icon: '/image/skills/cypress.png',
+    },
+    {
+        stack: 'Playwright',
+        icon: '/image/skills/playwright.svg',
+    },
+    {
+        stack: 'Jest',
+        icon: '/image/skills/jest.png',
+    },
+    {
         stack: 'Github',
         icon: '/image/skills/github.png',
     },
