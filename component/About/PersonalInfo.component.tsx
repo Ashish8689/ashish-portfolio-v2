@@ -15,8 +15,8 @@ const PersonalInfo: React.FC = () => {
         <div>
             <div className="content">
                 <h1 className="title">
-                    For over 2+ year I have successfully providing best services
-                    to my Companies and Clients.
+                    For over 4.6 year I have successfully providing best
+                    services to my Companies and Clients.
                 </h1>
                 <p className="para">
                     If you&apos;re looking for a Software Engineer who is
@@ -58,7 +58,7 @@ const PersonalInfo: React.FC = () => {
                             icon={<Birthday className="i" />}
                         />
                         <AboutContent
-                            element="MSC.CA - (Pursuing)"
+                            element="Msc in Computer Application"
                             icon={<Degree className="i" />}
                         />
 
