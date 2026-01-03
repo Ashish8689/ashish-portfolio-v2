@@ -3,12 +3,13 @@ import { ServiceListProps } from './service.interface'
 
 const ServiceList = ({ data }: ServiceListProps): React.JSX.Element => {
     const { id, service, description, icon } = data
-    const Icon = icon
+    // const Icon = icon
 
     return (
         <div className={`service-block ${id === 2 ? ' active' : ''}`}>
             <div className="service-img-container">
-                <Icon />
+                {/* <Icon /> */}
+                {icon}
             </div>
             <div className="service-content">
                 <h1 className="service-content-title">{service}</h1>

@@ -10,7 +10,7 @@ import { CSSTransition } from 'react-transition-group'
 const Modal = ({ data, onClose, show }: ModalProps): React.JSX.Element => {
     const { description, img, stack, name, githubUrl, url } = data
     const closeOnEscapeKeyDown = useCallback(
-        (e: any) => {
+        (e: KeyboardEvent) => {
             if ((e.charCode || e.keyCode) === 27) {
                 onClose()
             }

@@ -65,7 +65,7 @@ const Header: FC = () => {
                                 <a
                                     download
                                     className="button"
-                                    href="/image/CV-ASHISH-GUPTA.pdf"
+                                    href="/image/CV_ASHISH_GUPTA.pdf"
                                 >
                                     Download CV
                                 </a>

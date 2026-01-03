@@ -3,6 +3,6 @@ export interface ServiceListProps {
         id: number
         service: string
         description: string
-        icon: any
+        icon: React.JSX.Element
     }
 }

@@ -6,7 +6,7 @@ export enum AboutTab {
     COMPANY = 'company',
 }
 export interface AboutContentProps {
-    icon: any
+    icon: React.JSX.Element
     element: ReactNode
 }
 
